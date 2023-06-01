@@ -1,6 +1,12 @@
 [
     {
-        "email": "user@capellabpo.com",
-        "password": "capellabpo123" 
+        "userId": "0",
+        "email": "admin@capellabpo.com",
+        "password": "admincapellabpo123" 
+    },
+    {
+        "userId": "1",
+        "email": "client@capellabpo.com",
+        "password": "clientcapellabpo123" 
     }
 ]
