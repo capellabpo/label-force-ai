@@ -1,12 +1,12 @@
 [
     {
         "userId": "0",
-        "email": "admin@capellabpo.com",
-        "password": "admincapellabpo123" 
+        "email": "testadmin@cbpo.com",
+        "password": "admintest123cbpo" 
     },
     {
         "userId": "1",
-        "email": "client@capellabpo.com",
-        "password": "clientcapellabpo123" 
+        "email": "testclient@cbpo.com",
+        "password": "clienttest123cbpo" 
     }
 ]
