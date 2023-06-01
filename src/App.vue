@@ -8,20 +8,14 @@
         <img class="branding-img" src="./assets/imgs/Lb_gfx.png" />
       </div>
     </div>
-
-
     <div class="divider"></div>
-
     <!-- Use desktop versions for now -->
     <!-- Work on actual sign-in -->
     <div id="sign-in-col">
       <router-view></router-view>
     </div>
-
   </div>
 </template>
 
 <script>
 </script>
-
-<style></style>

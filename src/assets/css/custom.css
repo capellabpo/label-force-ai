@@ -255,6 +255,7 @@ body {
         }
 
         #sign-in-fpwd {
+            cursor: pointer;
             margin-top: 6px;
             padding-top: 6px;
         }
@@ -332,6 +333,7 @@ body {
     }
 
     .text-return {
+        cursor: pointer;
         margin: auto;
         padding: 1rem;
         color: #475467;

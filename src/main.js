@@ -10,6 +10,7 @@ import RegisterView from "./views/RegisterView.vue";
 import EmailVerificationView from "./views/EmailVerificationView.vue";
 import EmailOtpCodeView from "./views/EmailOtpCodeView.vue";
 import AccountCreated from "./views/AccountCreated.vue";
+import PasswordResetView from "./views/PasswordResetView.vue";
 
 const app = createApp(App);
 
@@ -27,6 +28,10 @@ const router = createRouter({
     {
         path: "/signup",
         component: RegisterView,
+    },
+    {
+        path: "/passwordreset",
+        component: PasswordResetView,
     },
     {
         path: "/emailverification",
