@@ -1,35 +1,55 @@
 <template>
-    <form>
-        <img class="forgot-pwd-icon" src="../assets/imgs/mail_icon.png"/>
-        <div class="mail-verification-form">
-            <h4 id="">Check your email</h4>
-            <small class="text-mail-vc">An email with a verification code was sent to johndoe@gmail.com</small>
-            
-            <div class="code-container">
-                <div class="form-group otp-code">
-                    <!-- <input type="email" class="form-control code-input" placeholder="" required>
+    <div class="container">
+        <div id="brand-col">
+            <div class="app-title">
+                <img class="label-force-logo" src="../assets/imgs/Lb_logo.png" />
+            </div>
+            <div class="app-branding">
+                <img class="branding-img" src="../assets/imgs/Lb_gfx.png" />
+            </div>
+        </div>
+        <div class="divider"></div>
+        <!-- Use desktop versions for now -->
+        <!-- Work on actual sign-in -->
+        <div id="sign-in-col">
+            <form>
+                <img class="forgot-pwd-icon" src="../assets/imgs/mail_icon.png" />
+                <div class="mail-verification-form">
+                    <h4 id="">Check your email</h4>
+                    <small class="text-mail-vc">An email with a verification code was sent to johndoe@gmail.com</small>
+
+                    <div class="code-container">
+                        <div class="form-group otp-code">
+                            <!-- <input type="email" class="form-control code-input" placeholder="" required>
                     <input type="email" class="form-control code-input" placeholder="" required>
                     <input type="email" class="form-control code-input" placeholder="" required>
                     <input type="email" class="form-control code-input" placeholder="" required> -->
-                    <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
-                        <input class="m-2 text-center form-control rounded" type="text" id="input1" v-on:keyup="inputenter(1)" maxlength="1" />
-                        <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(2)" type="text" id="input2" maxlength="1" />
-                        <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(3)" type="text" id="input3" maxlength="1" />
-                        <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(4)" type="text" id="input4" maxlength="1" />
+                            <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+                                <input class="m-2 text-center form-control rounded" type="text" id="input1"
+                                    v-on:keyup="inputenter(1)" maxlength="1" />
+                                <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(2)" type="text"
+                                    id="input2" maxlength="1" />
+                                <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(3)" type="text"
+                                    id="input3" maxlength="1" />
+                                <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(4)" type="text"
+                                    id="input4" maxlength="1" />
+                            </div>
+                            <div class="invalid-feedback">
+                                Invalid code. Please try again!
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="invalid-feedback">
-                        Invalid code. Please try again!
-                    </div>
+
+                    <small class="text-resend"><a href="#">RESEND CODE</a></small>
+
+                    <button @click="emailVerifiedForm" type="submit" class="btn btn-primary">Verify email</button>
+                    <small @click="goToSignInForm" class="text-return"><img class="sm-icons"
+                            src="../assets/imgs/arrow_left.png" />&nbsp;&nbsp;Back to Sign in</small>
                 </div>
-                
-            </div>
-            
-            <small class="text-resend"><a href="#">RESEND CODE</a></small>
-            
-            <button @click="emailVerifiedForm" type="submit" class="btn btn-primary">Verify email</button>
-            <small @click="goToSignInForm" class="text-return"><img class="sm-icons" src="../assets/imgs/arrow_left.png"/>&nbsp;&nbsp;Back to Sign in</small>
+            </form>
         </div>
-    </form>
+    </div>
 </template>
 
 <script>
@@ -47,7 +67,7 @@ export default {
 
             const inputs = document.querySelectorAll('#otp > *[id]');
             for (let i = 0; i < inputs.length; i++) {
-                inputs[i].addEventListener('keydown', function(event) {
+                inputs[i].addEventListener('keydown', function (event) {
                     if (event.key === "Backspace") {
                         inputs[i].value = '';
                         if (i !== 0) inputs[i - 1].focus();
@@ -95,7 +115,8 @@ export default {
 }
 
 .not-invalid {
-    border-color: #198754;;
+    border-color: #198754;
+    ;
     background-repeat: no-repeat;
     background-position: right calc(0.375em + 0.1875rem) center;
     background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -109,6 +130,5 @@ export default {
 /* valid input */
 /* .form-group input:focus {
     box-shadow: 0 0 10px #198754;;
-} */
-</style>
+} */</style>
 
