@@ -12,6 +12,8 @@ import EmailOtpCodeView from "./views/EmailOtpCodeView.vue";
 import AccountCreated from "./views/AccountCreated.vue";
 import PasswordResetView from "./views/PasswordResetView.vue";
 
+import ClientDashoard from "./views/client/ClientDashboard.vue";
+
 const app = createApp(App);
 
 const router = createRouter({
@@ -44,7 +46,13 @@ const router = createRouter({
     {
         path: "/registered",
         component: AccountCreated,
-    }
+    },
+
+    // Client Dashboard
+    {
+        path: "/client/mydashboard",
+        component: ClientDashoard,
+    },
   ],
 });
 
