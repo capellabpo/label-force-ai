@@ -3,7 +3,9 @@
     <!-- Work on actual sign-in -->
     <!-- work on localStorage for remember me -->
     <!-- work on test user roles to redirect user based from role (admin/client) -->
-
+    <!-- LocalStorage for remember me checkbox -->
+    <!-- Create Front-end for client and admin dashboard -->
+    
     <form class="sign-in-form">
         <h5 id="">Sign in to your account</h5>
         <a class="btn btn-sm btn-google btn-block btn-outline" href="#"><img class="md-icons" src="https://img.icons8.com/color/16/000000/google-logo.png">&nbsp;&nbsp;Continue with Google</a>
