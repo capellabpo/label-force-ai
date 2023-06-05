@@ -14,6 +14,8 @@ import AccountCreated from "./views/AccountCreated.vue";
 import PasswordResetView from "./views/PasswordResetView.vue";
 
 import ClientDashoard from "./views/client/ClientDashboard.vue";
+import NewProject from "./views/client/AddNewProject.vue";
+import FileUpload from "./views/client/UploadFiles.vue";
 
 const app = createApp(App);
 
@@ -53,6 +55,14 @@ const router = createRouter({
     {
         path: "/client/mydashboard",
         component: ClientDashoard,
+    },
+    {
+        path: "/client/newproject",
+        component: NewProject,
+    },
+    {
+        path: "/client/uploadfiles",
+        component: FileUpload,
     },
   ],
 });
