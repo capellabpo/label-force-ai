@@ -78,9 +78,9 @@
                         </div>
                         <div class="progress-tracker">
                             <div class="step">
-                                <div class="circle"></div>
-                                <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="circle active"></div>
+                                <div class="line active"></div>
+                                <div class="tracker-details active">
                                     <span>New Project</span>
                                     <span>Please provide the details of your project</span>
                                 </div>
@@ -137,9 +137,9 @@
                             
                             <div class="form-pagination form-item">
                                 <!-- cancel button transitions to back -->
-                                <button type="button" class="btn btn-light">Next &rarr;</button>
-                                <button type="button" class="btn btn-light">Skip</button>
-                                <button type="button" class="btn btn-light">&larr; Cancel</button>
+                                <button @click="goToLabelOverviewForm" type="button" class="btn btn-light">Next &rarr;</button>
+                                <button @click="goToLabelOverviewForm" type="button" class="btn btn-light">Skip</button>
+                                <button @click="goToNewProject" type="button" class="btn btn-light">&larr; Back</button>
                             </div>
                         </form>
                         
@@ -152,17 +152,18 @@
 </template>
 
 <script>
-// JavaScript for progress tracker
-// function nextStep() {
-//     const steps = document.querySelectorAll('.step');
-//     for (let i = 0; i < steps.length; i++) {
-//     if (!steps[i].querySelector('.circle').classList.contains('active')) {
-//         steps[i].querySelector('.circle').classList.add('active');
-//         steps[i].querySelector('.line').classList.add('active');
-//         break;
-//     }
-//     }
-// }
+export default {
+    name: "UploadFileForm",
+    methods: {
+        goToNewProject() {
+            this.$router.push("/newproject");
+        },
+
+        goToLabelOverviewForm() {
+            this.$router.push("/labellingoverview");
+        }
+    }
+}
 </script>
 
 <style scoped>
@@ -302,7 +303,11 @@
                 }
 
                 .step .line.active {
-                    background-color: #007bff;
+                    height: 51px;
+                    border: 1px solid #007bff;
+                    position: absolute;
+                    margin-top: 25px;
+                    opacity: .7;
                 }
 
             }
@@ -356,7 +361,7 @@
                         width: 100%;
                         right: 0;
                         height: 57px;
-                        content: " Drag and drop files here ";
+                        content: "Drag and drop files here";
                         display: block;
                         margin: 0 auto;
                         color: #053CD3;

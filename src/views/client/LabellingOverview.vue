@@ -79,24 +79,24 @@
                         <div class="progress-tracker">
                             <div class="step">
                                 <div class="circle active"></div>
-                                <div class="line"></div>
+                                <div class="line active"></div>
                                 <div class="tracker-details active">
                                     <span>New Project</span>
                                     <span>Please provide the details of your project</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
-                                <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="circle active"></div>
+                                <div class="line active"></div>
+                                <div class="tracker-details active">
                                     <span>Upload Files</span>
                                     <span>Upload necessary files (max 150mb)</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
+                                <div class="circle active"></div>
                                 <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="tracker-details active">
                                     <span>Labelling Overview</span>
                                     <span>Please provide a brief description of your project</span>
                                 </div>
@@ -121,60 +121,29 @@
 
                     <div class="col-lg-9 right-column">
                         <form id="add-new-projects-form" action="">
-                            <div class="mb-3 form-item">
-                              <label for="" class="form-label">Project Name</label>
-                              <input type="text" name="" id="" class="form-control" placeholder="Enter Project Name" aria-describedby="helpId" required>
+                            <div class="mb-3">
+                              <label for="" class="form-label">Labelling Overview</label>
+                              <textarea class="form-control" name="" id="" rows="3"></textarea>
                             </div>
-
-                            <div class="mb-3 form-item">
-                                <label for="" class="form-label">Data Type</label>
-                                <div class="datatype-btns">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/image_icon.png"/> Image
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/video_camera_icon.png"/> Video
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/underlined_letter_icon.png"/> Text
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/file_icone.png"/> Document
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/suitcase_icon.png"/> Dicom/Medical
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/tripledot_icon.png"/> Others
-                                    </button>
-                                </div>
+                            <div class="line-divider">
+                                <hr class="divider">
+                                <small class="form-text text-muted">or</small>
+                                <hr class="divider">
                             </div>
-
-                            <div class="label-type-cont form-item">
-                                <label for="" class="form-label">Label Type</label>
-                                <select class="form-select" aria-label="Default select example" required>
-                                    <option selected>Select Label Type</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                                <small id="helpId" class="form-text text-muted">Select all label types based on the specific requirements of your project.</small>
+                            <div class="form-group files">
+                                <label for="" class="form-label">Upload Files</label>
+                                <input type="file" class="form-control" multiple="">
                             </div>
-                            
-                            <div class="label-soft-cont form-item">
-                                <label for="" class="form-label">Labelling Software</label>
-                                <select class="form-select" aria-label="Default select example" required>
-                                    <option selected>Select a Labelling Software</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                            </div>
+                            <!-- <div class="mb-3 form-item">
+                              <label for="" class="form-label">Provide a link that allows our team to access your files.</label>
+                              <input type="text" name="" id="" class="form-control" placeholder="Provide your link" aria-describedby="helpId">
+                            </div> -->
                             
                             <div class="form-pagination form-item">
                                 <!-- cancel button transitions to back -->
-                                <button @click="goToUploadFileForm" type="button" class="btn btn-light">Next &rarr;</button>
-                                <button @click="goBackToDashboard" type="button" class="btn btn-light">&larr; Cancel</button>
+                                <button @click="goToLabelHoursForm" type="button" class="btn btn-light">Next &rarr;</button>
+                                <button @click="goToLabelHoursForm" type="button" class="btn btn-light">Skip</button>
+                                <button @click="goToUploadFileForm" type="button" class="btn btn-light">&larr; Back</button>
                             </div>
                         </form>
                         
@@ -187,27 +156,15 @@
 </template>
 
 <script>
-// JavaScript for progress tracker
-// function nextStep() {
-//     const steps = document.querySelectorAll('.step');
-//     for (let i = 0; i < steps.length; i++) {
-//     if (!steps[i].querySelector('.circle').classList.contains('active')) {
-//         steps[i].querySelector('.circle').classList.add('active');
-//         steps[i].querySelector('.line').classList.add('active');
-//         break;
-//     }
-//     }
-// }
-
 export default {
-    name: "NewPoject",
+    name: "LabellingOverviewForm",
     methods: {
-        goBackToDashboard() {
-            this.$router.push("/client/mydashboard");
-        },
-
         goToUploadFileForm() {
             this.$router.push("/uploadfiles");
+        },
+
+        goToLabelHoursForm() {
+            this.$router.push("/labellinghours");
         }
     }
 }
@@ -386,31 +343,68 @@ export default {
                         font-size: 16px;
                     }
 
-                    .datatype-btns {
-                        display: grid;
-                        grid-auto-rows: 1fr;
-                        grid-template-columns: 1fr 1fr 1fr;
+                    .files input {
+                        -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+                        transition: outline-offset .15s ease-in-out, background-color .15s linear;
+                        padding: 50px 0px 90px 25%;
+                        text-align: center !important;
+                        margin: 0;
+                        width: 100% !important;
+                    }
+                    
+                    .files{ 
+                        position:relative
+                    }
 
-                        .btn-primary {
-                            --bs-btn-color: #344054;
-                            --bs-btn-bg: #FFFFFF;
-                            --bs-btn-border-color: #D0D5DD;
+                    .files:before {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 0;  
+                        pointer-events: none;
+                        width: 100%;
+                        right: 0;
+                        height: 57px;
+                        content: "Drag and drop files here";
+                        display: block;
+                        margin: 0 auto;
+                        color: #053CD3;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        text-align: center;
+                    }
+
+                    
+                    .line-divider {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: stretch;
+                        font-weight: 700;
+                        padding: 2rem 0px 2rem 0px;
+
+                        .divider {
+                            color: #556370;
+                            opacity: .125;
+                            width: 250px;
+                            font-weight: 600;
                         }
 
-                        .datatype-icons {
-                            width: 18px;
-                            height: 18px;
-                            border: 1px solid #EAF7FD;
-                            border-radius: 8px;
-                            border-width: 4px;
-                            background-color: #EAF7FD;
+                        @media screen and (max-width: 1253px) {
+                            .divider {
+                                color: #556370;
+                                opacity: .125;
+                                width: 100px;
+                                font-weight: 600;
+                            }
+                        }
+
+                        .form-text {
+                            margin: 6px 1rem 0px 1rem;
                         }
                     }
 
-                    .datatype-btns > * {
-                        padding: 15px;
-                        margin: 15px 10px;
-                    }
+
 
                     .form-pagination {
                         display: flex;

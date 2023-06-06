@@ -94,7 +94,7 @@
                                     <input class="form-control me-2" type="search" placeholder="&#x2315; Search" aria-label="Search">
                                     <button class="btn btn-light" type="submit"><img src="../../assets/imgs/dashboard/filter_icon.png" />&nbsp;Filters</button>
                                 </form>
-                                <button class="btn btn-primary" type="submit"><img src="../../assets/imgs/dashboard/new_icon.png" />&nbsp;New Project</button>
+                                <button @click="addNewProject" class="btn btn-primary" type="submit"><img src="../../assets/imgs/dashboard/new_icon.png" />&nbsp;New Project</button>
                             </div>
                             <table class="table">
                             <!-- <table class="table table-hover"> -->
@@ -258,7 +258,15 @@
 </template>
 
 <script>
-    // name: "ClientDashboard"
+export default {
+    name: "ClientDashboard",
+    methods: {
+        addNewProject() {
+            this.$router.push("/newproject");
+        },
+    }
+}
+    
 </script>
 
 <style scoped>

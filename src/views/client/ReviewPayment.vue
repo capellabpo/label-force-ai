@@ -79,40 +79,40 @@
                         <div class="progress-tracker">
                             <div class="step">
                                 <div class="circle active"></div>
-                                <div class="line"></div>
+                                <div class="line active"></div>
                                 <div class="tracker-details active">
                                     <span>New Project</span>
                                     <span>Please provide the details of your project</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
-                                <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="circle active"></div>
+                                <div class="line active"></div>
+                                <div class="tracker-details active">
                                     <span>Upload Files</span>
                                     <span>Upload necessary files (max 150mb)</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
-                                <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="circle active"></div>
+                                <div class="line active"></div>
+                                <div class="tracker-details active">
                                     <span>Labelling Overview</span>
                                     <span>Please provide a brief description of your project</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
-                                <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="circle active"></div>
+                                <div class="line active"></div>
+                                <div class="tracker-details active">
                                     <span>Labelling Hours</span>
                                     <span>Please type the number of hours you wish to purchase</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
+                                <div class="circle active"></div>
                                 <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="tracker-details active">
                                     <span>Review & Payment</span>
                                 </div>
                             </div>
@@ -121,60 +121,57 @@
 
                     <div class="col-lg-9 right-column">
                         <form id="add-new-projects-form" action="">
-                            <div class="mb-3 form-item">
-                              <label for="" class="form-label">Project Name</label>
-                              <input type="text" name="" id="" class="form-control" placeholder="Enter Project Name" aria-describedby="helpId" required>
-                            </div>
-
-                            <div class="mb-3 form-item">
-                                <label for="" class="form-label">Data Type</label>
-                                <div class="datatype-btns">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/image_icon.png"/> Image
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/video_camera_icon.png"/> Video
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/underlined_letter_icon.png"/> Text
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/file_icone.png"/> Document
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/suitcase_icon.png"/> Dicom/Medical
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/tripledot_icon.png"/> Others
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="label-type-cont form-item">
-                                <label for="" class="form-label">Label Type</label>
-                                <select class="form-select" aria-label="Default select example" required>
-                                    <option selected>Select Label Type</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                                <small id="helpId" class="form-text text-muted">Select all label types based on the specific requirements of your project.</small>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Review & Payment</label>
+                                <!-- <textarea class="form-control" name="" id="" rows="3"></textarea> -->
                             </div>
                             
-                            <div class="label-soft-cont form-item">
-                                <label for="" class="form-label">Labelling Software</label>
-                                <select class="form-select" aria-label="Default select example" required>
-                                    <option selected>Select a Labelling Software</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                            <div class="row">
+                                <div class="col-sm-7 payment-column">
+                                    <label for="" class="form-label">Project Details</label>
+                                    <hr>
+                                    <ul>
+                                        <li>Data Type: <span>Image, Video</span></li>
+                                        <li>Label Type: <span>Bounding Box, Classification</span></li>
+                                        <li>Labelling Software: <span>Labelbox</span></li>
+                                        <li>Uploaded Files: <span>Completed</span></li>
+                                        <li>Uploaded Documents: <span>Completed</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4 payment-summary">
+                                    <div class="payment-sum-header">
+                                        <label for="" class="form-label">Payment Summary</label>
+                                        <a href="#">Edit</a>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col">
+                                            <span>$ per hour</span>
+                                            <span>Purchased Hours</span>
+                                        </div>
+                                        <div class="col">
+                                            <span>$5.00</span>
+                                            <span>10 hrs</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col">
+                                            <h3>Total</h3>
+                                            <span>for 10 hours</span>
+                                        </div>
+                                        <div class="col">
+                                            <h3>$50.00</h3>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary">Pay Now</button>
+                                </div>
                             </div>
                             
                             <div class="form-pagination form-item">
                                 <!-- cancel button transitions to back -->
-                                <button @click="goToUploadFileForm" type="button" class="btn btn-light">Next &rarr;</button>
-                                <button @click="goBackToDashboard" type="button" class="btn btn-light">&larr; Cancel</button>
+                                <button @click="goToStripePayment" type="button" class="btn btn-light">Next &rarr;</button>
+                                <button @click="goToLabelHoursForm" type="button" class="btn btn-light">&larr; Back</button>
                             </div>
                         </form>
                         
@@ -187,27 +184,15 @@
 </template>
 
 <script>
-// JavaScript for progress tracker
-// function nextStep() {
-//     const steps = document.querySelectorAll('.step');
-//     for (let i = 0; i < steps.length; i++) {
-//     if (!steps[i].querySelector('.circle').classList.contains('active')) {
-//         steps[i].querySelector('.circle').classList.add('active');
-//         steps[i].querySelector('.line').classList.add('active');
-//         break;
-//     }
-//     }
-// }
-
 export default {
-    name: "NewPoject",
+    name: "PaymentForm",
     methods: {
-        goBackToDashboard() {
-            this.$router.push("/client/mydashboard");
+        goToLabelHoursForm() {
+            this.$router.push("/labellinghours");
         },
 
-        goToUploadFileForm() {
-            this.$router.push("/uploadfiles");
+        goToStripePayment() {
+            // Opens a new window that re-directs to Stripe payment page
         }
     }
 }
@@ -376,57 +361,104 @@ export default {
                     align-items: stretch;
                     justify-content: space-between;
 
-                    .form-item {
-                        margin: 15px 0px;
-                    }
-
-                    .form-label {
-                        color: #344054;
-                        font-weight: 500;
-                        font-size: 16px;
-                    }
-
-                    .datatype-btns {
-                        display: grid;
-                        grid-auto-rows: 1fr;
-                        grid-template-columns: 1fr 1fr 1fr;
-
-                        .btn-primary {
-                            --bs-btn-color: #344054;
-                            --bs-btn-bg: #FFFFFF;
-                            --bs-btn-border-color: #D0D5DD;
+                        .btn-light {
+                            --bs-btn-hover-color: #FFFFFF;
+                            --bs-btn-hover-bg: #1F5AFA;
+                            --bs-btn-hover-border-color: #1F5AFA;
                         }
 
-                        .datatype-icons {
-                            width: 18px;
-                            height: 18px;
-                            border: 1px solid #EAF7FD;
-                            border-radius: 8px;
-                            border-width: 4px;
-                            background-color: #EAF7FD;
+                        > div {
+                            margin-bottom: 2rem;
                         }
-                    }
 
-                    .datatype-btns > * {
-                        padding: 15px;
-                        margin: 15px 10px;
-                    }
-
-                    .form-pagination {
-                        display: flex;
-                        flex-direction: row-reverse;
-                        flex-wrap: wrap;
-                        justify-content: flex-start;
-                        align-items: center;
-
-                        > button {
-                            margin: 0px 10px;
-                            border-radius: 20px;
-                            border: 1px solid #D0D5DD;
-                            font-size: 14px;
-                            font-weight: 600;
+                        .form-item {
+                            margin: 15px 0px;
                         }
-                    }
+
+                        .form-label {
+                            color: #344054;
+                            font-weight: 500;
+                            font-size: 16px;
+                        }
+
+                        .row {
+
+                            > div:first-child {
+                                margin-right: 1rem;
+                            }
+
+                            .payment-column {
+                                border: 1px solid #EAECF0;
+                                border-radius: 8px;
+                                padding: 1rem;
+
+                                > hr {
+                                    border-color: grey;
+                                    opacity: .1;
+                                }
+
+                                > ul li {
+                                    margin-bottom: 1rem;
+
+                                    > span {
+                                        color: #475467;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+
+                            .payment-summary {
+                                border: 1px solid #EAECF0;
+                                border-radius: 8px;
+                                padding: 1rem;
+
+                                .payment-sum-header {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content:  space-between;
+                                }
+
+                                .row .col {
+                                    font-size: 14px;
+                                    display: grid;
+                                    /* justify-content: start;
+                                    align-content: center; */
+
+                                    > span:first-child {
+                                        color: #A1A2A4;
+                                        margin: 0px 1rem 1rem 0px;
+                                    }
+                                }
+
+                                .btn-primary {
+                                    width: 100%;
+                                    border-radius: 20px;
+                                    font-size: 18px;
+                                    margin-top: 10px;
+                                }
+                            }
+
+                        }
+                        
+
+                    
+
+                        .form-pagination {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-items: center;
+                            margin-left: 71%;
+
+                            > button {
+                                margin: 0px 10px;
+                                border-radius: 20px;
+                                border: 1px solid #D0D5DD;
+                                font-size: 14px;
+                                font-weight: 600;
+                            }
+                        }
                 }
                 
             }

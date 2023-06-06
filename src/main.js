@@ -16,6 +16,9 @@ import PasswordResetView from "./views/PasswordResetView.vue";
 import ClientDashoard from "./views/client/ClientDashboard.vue";
 import NewProject from "./views/client/AddNewProject.vue";
 import FileUpload from "./views/client/UploadFiles.vue";
+import LabellingOverview from "./views/client/LabellingOverview.vue";
+import LabellingHours from "./views/client/LabellingHours.vue";
+import ReviewPayment from "./views/client/ReviewPayment.vue";
 
 const app = createApp(App);
 
@@ -57,12 +60,24 @@ const router = createRouter({
         component: ClientDashoard,
     },
     {
-        path: "/client/newproject",
+        path: "/newproject",
         component: NewProject,
     },
     {
-        path: "/client/uploadfiles",
+        path: "/uploadfiles",
         component: FileUpload,
+    },
+    {
+        path: "/labellingoverview",
+        component: LabellingOverview,
+    },
+    {
+        path: "/labellinghours",
+        component: LabellingHours,
+    },
+    {
+        path: "/payment",
+        component: ReviewPayment,
     },
   ],
 });
