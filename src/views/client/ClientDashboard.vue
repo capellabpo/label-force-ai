@@ -156,7 +156,7 @@
                                         </td>
                                         <td>5/25/23</td>
                                         <td>
-                                            <button type="button" class="btn btn-primary manage-btn">Manage</button>
+                                            <button @click="manageProject" type="button" class="btn btn-primary manage-btn">Manage</button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -180,7 +180,7 @@
                                         </td>
                                         <td>4/01/23</td>
                                         <td>
-                                            <button type="button" class="btn btn-primary manage-btn">Manage</button>
+                                            <button @click="manageProject" type="button" class="btn btn-primary manage-btn">Manage</button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -262,8 +262,12 @@ export default {
     name: "ClientDashboard",
     methods: {
         addNewProject() {
-            this.$router.push("/newproject");
+            this.$router.push("/mydashboard/newproject");
         },
+
+        manageProject() {
+            this.$router.push("/mydashboard/manageproject");
+        }
     }
 }
     

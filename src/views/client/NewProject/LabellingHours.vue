@@ -3,7 +3,7 @@
         <div id="side-nav-bar" class="bg-transparent col-auto col-md-3 col-md-3 min-vh-100 d-flex flex-column justify-content-between">
             <div class="bg-transparent p-2">
                 <a href="#" class="d-flex mt-1 align-items-center text-white" id="logo-item">
-                    <img class="nav-logo" src="../../assets/imgs/dashboard/labelforce_icon.png" />
+                    <img class="nav-logo" src="../../../assets/imgs/dashboard/labelforce_icon.png" />
                     <span class="fs-4 ms-3 d-none d-sm-inline" style="margin: auto;">
                         LABEL<span style="font-weight: 300;">FORCE</span> AI
                     </span>
@@ -11,7 +11,7 @@
                 <ul class="nav nav-pills flex-column mt-4">
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white" style="background-color: #101828;">
-                            <img class="profile-icon" src="../../assets/imgs/dashboard/Avatar.png" />
+                            <img class="profile-icon" src="../../../assets/imgs/dashboard/Avatar.png" />
                             <span class="fs-4 ms-3 d-none d-sm-inline">
                                 <span style="font-size: 18px; font-weight: 500;">Olivia Rhye</span>
                                 <br><span style="font-size: 14px; font-weight: 300; display: block;">olivia@untitledui.com</span>
@@ -20,26 +20,26 @@
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/Icon.png" />
+                            <img src="../../../assets/imgs/dashboard/Icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Projects</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/inbox_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/inbox_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Inbox</span>
                             <span class="inbox-count">10</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/invoices_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/invoices_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Invoices</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/account_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/account_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Account</span>
                         </a>
                     </li>
@@ -50,14 +50,14 @@
                 <ul class="nav nav-pills flex-column mt-4">
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/support_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/support_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Support</span>
                         </a>
                     </li>
                     <hr id="side-nav-divider">
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/logout_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/logout_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Logout</span>
                         </a>
                     </li>
@@ -72,39 +72,39 @@
                 <div class="row">
                     <div class="col-lg-3 left-column">
                         <div class="current-page-container">
-                            <img src="../../assets/imgs/dashboard/home_icon.png" />
-                            <img src="../../assets/imgs/dashboard/caret_right_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/home_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/caret_right_icon.png" />
                             <button type="button" class="btn btn-light">New Project</button>
                         </div>
                         <div class="progress-tracker">
                             <div class="step">
                                 <div class="circle active"></div>
-                                <div class="line"></div>
+                                <div class="line active"></div>
                                 <div class="tracker-details active">
                                     <span>New Project</span>
                                     <span>Please provide the details of your project</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
-                                <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="circle active"></div>
+                                <div class="line active"></div>
+                                <div class="tracker-details active">
                                     <span>Upload Files</span>
                                     <span>Upload necessary files (max 150mb)</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
-                                <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="circle active"></div>
+                                <div class="line active"></div>
+                                <div class="tracker-details active">
                                     <span>Labelling Overview</span>
                                     <span>Please provide a brief description of your project</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
+                                <div class="circle active"></div>
                                 <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="tracker-details active">
                                     <span>Labelling Hours</span>
                                     <span>Please type the number of hours you wish to purchase</span>
                                 </div>
@@ -121,60 +121,77 @@
 
                     <div class="col-lg-9 right-column">
                         <form id="add-new-projects-form" action="">
-                            <div class="mb-3 form-item">
-                              <label for="" class="form-label">Project Name</label>
-                              <input type="text" name="" id="" class="form-control" placeholder="Enter Project Name" aria-describedby="helpId" required>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Labelling Hours</label>
+                                <p class="form-text text-muted">
+                                    Please let us know the number of hours you would like to purchase. Our team is committed to providing the necessary support to ensure the successful completion of your project within the specified timeframe.
+                                </p>
+                                <!-- <textarea class="form-control" name="" id="" rows="3"></textarea> -->
                             </div>
-
-                            <div class="mb-3 form-item">
-                                <label for="" class="form-label">Data Type</label>
-                                <div class="datatype-btns">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/image_icon.png"/> Image
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/video_camera_icon.png"/> Video
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/underlined_letter_icon.png"/> Text
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/file_icone.png"/> Document
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/suitcase_icon.png"/> Dicom/Medical
-                                    </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../assets/imgs/dashboard/table_icons/tripledot_icon.png"/> Others
-                                    </button>
+                            <div class="label-hours">
+                                <button @click.prevent="decrement" type="button" class="btn btn-light">
+                                    <span class="fa fa-minus"></span>
+                                </button>
+                                <input type="text" name="quant[1]" class="form-control input-number" v-model="hourcount" min="1" max="11"
+                                :class = "(hourcount >= 11) ? 'is-invalid' : ''"
+                                
+                                >
+                                <button @click.prevent="increment" type="button" class="btn btn-light"
+                                :class = "(hourcount >= 11) ? 'disabled' : ''">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+                                <div class="invalid-feedback">
+                                    The minimum is 10 hours.
                                 </div>
                             </div>
-
-                            <div class="label-type-cont form-item">
-                                <label for="" class="form-label">Label Type</label>
-                                <select class="form-select" aria-label="Default select example" required>
-                                    <option selected>Select Label Type</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                                <small id="helpId" class="form-text text-muted">Select all label types based on the specific requirements of your project.</small>
-                            </div>
                             
-                            <div class="label-soft-cont form-item">
-                                <label for="" class="form-label">Labelling Software</label>
-                                <select class="form-select" aria-label="Default select example" required>
-                                    <option selected>Select a Labelling Software</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                            <!-- <div class="col-sm-2">
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                        <button type="button" class="btn btn-outline-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                            <span class="fa fa-minus"></span>
+                                        </button>
+                                    </span>
+                                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                    <span class="input-group-append">
+                                        <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
+                                            <span class="fa fa-plus"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div> -->
+                            <div class="price-summary-cont">
+                                <label for="" class="form-label" style="font-size: 20px;">Price Summary</label>
+                                <hr>
+                                <div class="price-summary">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span>$ per hour</span>
+                                            <span>Purchased Hours</span>
+                                        </div>
+                                        <div class="col">
+                                            <span>$5.00</span>
+                                            <span>00 hrs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col">
+                                        <h1>Total</h1>
+                                        <span>for 0 hours</span>
+                                    </div>
+                                    <div class="col">
+                                        <h1>$0.00</h1>
+                                    </div>
+                                </div>
+
                             </div>
                             
                             <div class="form-pagination form-item">
                                 <!-- cancel button transitions to back -->
-                                <button @click="goToUploadFileForm" type="button" class="btn btn-light">Next &rarr;</button>
-                                <button @click="goBackToDashboard" type="button" class="btn btn-light">&larr; Cancel</button>
+                                <button @click="goPaymentForm" type="button" class="btn btn-light">Proceed to Payment &rarr;</button>
+                                <button @click="goToLabelOverviewForm" type="button" class="btn btn-light">&larr; Back</button>
                             </div>
                         </form>
                         
@@ -187,27 +204,29 @@
 </template>
 
 <script>
-// JavaScript for progress tracker
-// function nextStep() {
-//     const steps = document.querySelectorAll('.step');
-//     for (let i = 0; i < steps.length; i++) {
-//     if (!steps[i].querySelector('.circle').classList.contains('active')) {
-//         steps[i].querySelector('.circle').classList.add('active');
-//         steps[i].querySelector('.line').classList.add('active');
-//         break;
-//     }
-//     }
-// }
-
 export default {
-    name: "NewPoject",
+    name: "LabellingHoursForm",
+    data() {
+        return {
+            hourcount: 1
+        }
+    },
     methods: {
-        goBackToDashboard() {
-            this.$router.push("/client/mydashboard");
+        goToLabelOverviewForm() {
+            this.$router.push("/mydashboard/labellingoverview");
         },
 
-        goToUploadFileForm() {
-            this.$router.push("/uploadfiles");
+        goPaymentForm() {
+            this.$router.push("/mydashboard/payment");
+        },
+
+        increment () {
+            this.hourcount++;
+        },
+        decrement () {
+            if(this.hourcount > 1) {
+                this.hourcount-- ;
+            }
         }
     }
 }
@@ -376,57 +395,86 @@ export default {
                     align-items: stretch;
                     justify-content: space-between;
 
-                    .form-item {
-                        margin: 15px 0px;
-                    }
-
-                    .form-label {
-                        color: #344054;
-                        font-weight: 500;
-                        font-size: 16px;
-                    }
-
-                    .datatype-btns {
-                        display: grid;
-                        grid-auto-rows: 1fr;
-                        grid-template-columns: 1fr 1fr 1fr;
-
-                        .btn-primary {
-                            --bs-btn-color: #344054;
-                            --bs-btn-bg: #FFFFFF;
-                            --bs-btn-border-color: #D0D5DD;
+                        .btn-light {
+                            --bs-btn-hover-color: #FFFFFF;
+                            --bs-btn-hover-bg: #1F5AFA;
+                            --bs-btn-hover-border-color: #1F5AFA;
                         }
 
-                        .datatype-icons {
-                            width: 18px;
-                            height: 18px;
-                            border: 1px solid #EAF7FD;
+                        > div {
+                            margin-bottom: 2rem;
+                        }
+
+                        .form-item {
+                            margin: 15px 0px;
+                        }
+
+                        .form-label {
+                            color: #344054;
+                            font-weight: 500;
+                            font-size: 16px;
+                        }
+
+                        .form-text {
+                            margin: 6px 1rem 0px 1rem;
+                        }
+
+                        .label-hours {
+                            display: flex;
+                            flex-wrap: nowrap;
+                            flex-direction: row;
+                            width: 14%;
+                            margin-left: auto;
+
+                            .invalid-feedback {
+                                position: absolute;
+                                margin-top: 2.5rem;
+                            }
+                        }
+
+                        .price-summary-cont {
+                            border: 1px solid #EAECF0;
                             border-radius: 8px;
-                            border-width: 4px;
-                            background-color: #EAF7FD;
+                            padding: 1.5rem;
+
+                            > hr {
+                                border-color: grey;
+                                opacity: .1;
+                            }
+
+                            .price-summary .row {
+                                .col {
+                                    font-size: 18px;
+                                    display: grid;
+                                    justify-content: start;
+                                    align-content: center;
+
+                                    > span:first-child {
+                                        color: #A1A2A4;
+                                        margin: 0px 1rem 3rem 0px;
+                                    }
+                                }
+                            }
                         }
-                    }
 
-                    .datatype-btns > * {
-                        padding: 15px;
-                        margin: 15px 10px;
-                    }
+                        
 
-                    .form-pagination {
-                        display: flex;
-                        flex-direction: row-reverse;
-                        flex-wrap: wrap;
-                        justify-content: flex-start;
-                        align-items: center;
 
-                        > button {
-                            margin: 0px 10px;
-                            border-radius: 20px;
-                            border: 1px solid #D0D5DD;
-                            font-size: 14px;
-                            font-weight: 600;
+                        .form-pagination {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            > button {
+                                margin: 0px 10px;
+                                border-radius: 20px;
+                                border: 1px solid #D0D5DD;
+                                font-size: 14px;
+                                font-weight: 600;
+                            }
                         }
-                    }
                 }
                 
             }

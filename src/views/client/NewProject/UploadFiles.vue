@@ -1,9 +1,10 @@
 <template>
+    <router-view></router-view>
     <div class="container-fluid">
         <div id="side-nav-bar" class="bg-transparent col-auto col-md-3 col-md-3 min-vh-100 d-flex flex-column justify-content-between">
             <div class="bg-transparent p-2">
                 <a href="#" class="d-flex mt-1 align-items-center text-white" id="logo-item">
-                    <img class="nav-logo" src="../../assets/imgs/dashboard/labelforce_icon.png" />
+                    <img class="nav-logo" src="../../../assets/imgs/dashboard/labelforce_icon.png" />
                     <span class="fs-4 ms-3 d-none d-sm-inline" style="margin: auto;">
                         LABEL<span style="font-weight: 300;">FORCE</span> AI
                     </span>
@@ -11,7 +12,7 @@
                 <ul class="nav nav-pills flex-column mt-4">
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white" style="background-color: #101828;">
-                            <img class="profile-icon" src="../../assets/imgs/dashboard/Avatar.png" />
+                            <img class="profile-icon" src="../../../assets/imgs/dashboard/Avatar.png" />
                             <span class="fs-4 ms-3 d-none d-sm-inline">
                                 <span style="font-size: 18px; font-weight: 500;">Olivia Rhye</span>
                                 <br><span style="font-size: 14px; font-weight: 300; display: block;">olivia@untitledui.com</span>
@@ -20,26 +21,26 @@
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/Icon.png" />
+                            <img src="../../../assets/imgs/dashboard/Icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Projects</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/inbox_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/inbox_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Inbox</span>
                             <span class="inbox-count">10</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/invoices_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/invoices_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Invoices</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/account_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/account_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Account</span>
                         </a>
                     </li>
@@ -50,14 +51,14 @@
                 <ul class="nav nav-pills flex-column mt-4">
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/support_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/support_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Support</span>
                         </a>
                     </li>
                     <hr id="side-nav-divider">
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/logout_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/logout_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Logout</span>
                         </a>
                     </li>
@@ -72,8 +73,8 @@
                 <div class="row">
                     <div class="col-lg-3 left-column">
                         <div class="current-page-container">
-                            <img src="../../assets/imgs/dashboard/home_icon.png" />
-                            <img src="../../assets/imgs/dashboard/caret_right_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/home_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/caret_right_icon.png" />
                             <button type="button" class="btn btn-light">New Project</button>
                         </div>
                         <div class="progress-tracker">
@@ -87,24 +88,24 @@
                             </div>
                             <div class="step">
                                 <div class="circle active"></div>
-                                <div class="line active"></div>
+                                <div class="line"></div>
                                 <div class="tracker-details active">
                                     <span>Upload Files</span>
                                     <span>Upload necessary files (max 150mb)</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle active"></div>
-                                <div class="line active"></div>
-                                <div class="tracker-details active">
+                                <div class="circle"></div>
+                                <div class="line"></div>
+                                <div class="tracker-details">
                                     <span>Labelling Overview</span>
                                     <span>Please provide a brief description of your project</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle active"></div>
+                                <div class="circle"></div>
                                 <div class="line"></div>
-                                <div class="tracker-details active">
+                                <div class="tracker-details">
                                     <span>Labelling Hours</span>
                                     <span>Please type the number of hours you wish to purchase</span>
                                 </div>
@@ -121,77 +122,35 @@
 
                     <div class="col-lg-9 right-column">
                         <form id="add-new-projects-form" action="">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Labelling Hours</label>
-                                <p class="form-text text-muted">
-                                    Please let us know the number of hours you would like to purchase. Our team is committed to providing the necessary support to ensure the successful completion of your project within the specified timeframe.
-                                </p>
-                                <!-- <textarea class="form-control" name="" id="" rows="3"></textarea> -->
+                            <div class="form-group files">
+                                <label for="" class="form-label">Upload Files</label>
+                                <input @change="changeBoolValue" @input="handleFileUpload" type="file" class="form-control" id="inputFile" multiple="">
                             </div>
-                            <div class="label-hours">
-                                <button @click.prevent="decrement" type="button" class="btn btn-light">
-                                    <span class="fa fa-minus"></span>
-                                </button>
-                                <input type="text" name="quant[1]" class="form-control input-number" v-model="hourcount" min="1" max="11"
-                                :class = "(hourcount >= 11) ? 'is-invalid' : ''"
-                                
-                                >
-                                <button @click.prevent="increment" type="button" class="btn btn-light"
-                                :class = "(hourcount >= 11) ? 'disabled' : ''">
-                                    <span class="fa fa-plus"></span>
-                                </button>
-                                <div class="invalid-feedback">
-                                    The minimum is 10 hours.
+                            <div class="upload-list">
+                                <label for="" class="form-label" v-show="displayElement">Uploaded Files:</label>
+                                <div class="list-container" v-for="file in uploadedFiles" :key="file.name">
+                                    <img src="../../../assets/imgs/dashboard/file_upload_icons/file_icon.png" />
+                                    <div class="file-details">
+                                        <span class="file-name">{{ file.name }}</span>
+                                    <br><span class="file-size">{{ file.size }} KB</span>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <!-- <div class="col-sm-2">
-                                <div class="input-group">
-                                    <span class="input-group-prepend">
-                                        <button type="button" class="btn btn-outline-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-                                            <span class="fa fa-minus"></span>
-                                        </button>
-                                    </span>
-                                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-                                    <span class="input-group-append">
-                                        <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]">
-                                            <span class="fa fa-plus"></span>
-                                        </button>
-                                    </span>
-                                </div>
-                            </div> -->
-                            <div class="price-summary-cont">
-                                <label for="" class="form-label" style="font-size: 20px;">Price Summary</label>
-                                <hr>
-                                <div class="price-summary">
-                                    <div class="row">
-                                        <div class="col">
-                                            <span>$ per hour</span>
-                                            <span>Purchased Hours</span>
-                                        </div>
-                                        <div class="col">
-                                            <span>$5.00</span>
-                                            <span>00 hrs</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col">
-                                        <h1>Total</h1>
-                                        <span>for 0 hours</span>
-                                    </div>
-                                    <div class="col">
-                                        <h1>$0.00</h1>
-                                    </div>
-                                </div>
-
+                            <div class="line-divider">
+                                <hr class="divider">
+                                <small class="form-text text-muted">or</small>
+                                <hr class="divider">
+                            </div>
+                            <div class="mb-3 form-item">
+                              <label for="" class="form-label">Provide a link that allows our team to access your files.</label>
+                              <input type="text" name="" id="" class="form-control" placeholder="Provide your link" aria-describedby="helpId">
                             </div>
                             
                             <div class="form-pagination form-item">
                                 <!-- cancel button transitions to back -->
-                                <button @click="goPaymentForm" type="button" class="btn btn-light">Proceed to Payment &rarr;</button>
-                                <button @click="goToLabelOverviewForm" type="button" class="btn btn-light">&larr; Back</button>
+                                <button @click="goToLabelOverviewForm" type="button" class="btn btn-light">Next &rarr;</button>
+                                <button @click="goToLabelOverviewForm" type="button" class="btn btn-light">Skip</button>
+                                <button @click="goToNewProject" type="button" class="btn btn-light">&larr; Back</button>
                             </div>
                         </form>
                         
@@ -205,28 +164,29 @@
 
 <script>
 export default {
-    name: "LabellingHoursForm",
+    name: "UploadFileForm",
     data() {
         return {
-            hourcount: 1
+            uploadedFiles: [],
+            displayElement: false
         }
     },
     methods: {
+        goToNewProject() {
+            this.$router.push("/mydashboard/newproject");
+        },
+
         goToLabelOverviewForm() {
-            this.$router.push("/labellingoverview");
+            this.$router.push("/mydashboard/labellingoverview");
         },
 
-        goPaymentForm() {
-            this.$router.push("/payment");
+        handleFileUpload(event) {
+            const files = event.target.files;
+            this.uploadedFiles = Array.from(files);
         },
 
-        increment () {
-            this.hourcount++;
-        },
-        decrement () {
-            if(this.hourcount > 1) {
-                this.hourcount-- ;
-            }
+        changeBoolValue() {
+            this.displayElement = true;
         }
     }
 }
@@ -395,86 +355,131 @@ export default {
                     align-items: stretch;
                     justify-content: space-between;
 
-                        .btn-light {
-                            --bs-btn-hover-color: #FFFFFF;
-                            --bs-btn-hover-bg: #1F5AFA;
-                            --bs-btn-hover-border-color: #1F5AFA;
+                    .form-item {
+                        margin: 15px 0px;
+                    }
+
+                    .form-label {
+                        color: #344054;
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+
+                    .files input {
+                        -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+                        transition: outline-offset .15s ease-in-out, background-color .15s linear;
+                        padding: 120px 0px 85px 35%;
+                        text-align: center !important;
+                        margin: 0;
+                        width: 100% !important;
+                    }
+                    
+                    .files{ 
+                        position:relative
+                    }
+
+                    
+                    .files:before {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 0;  
+                        pointer-events: none;
+                        width: 100%;
+                        right: 0;
+                        height: 57px;
+                        content: "Drag and drop files here";
+                        display: block;
+                        margin: 0 auto;
+                        color: #053CD3;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        text-align: center;
+                    }
+
+                    .upload-list {
+                        padding: 0.5rem;
+                        margin: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-content: flex-start;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+
+                        .list-container {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            border: 1px solid #1F5AFA;
+                            border-radius: 12px;
+                            padding: 10px;
+                            margin: 0px 0px 1rem 0px;
+                            width: 100%;
+
+                            > img {
+                                margin: 0px 10px 0px 5px;
+                            }
+
+                            .file-name {
+                                color: #344054;
+                                font-weight: 500;
+                            }
+
+                            .file-size {
+                                color: #344054;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    
+                    .line-divider {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: stretch;
+                        font-weight: 700;
+                        padding: 0px 0px 2rem 0px;
+
+                        .divider {
+                            color: #556370;
+                            opacity: .125;
+                            width: 250px;
+                            font-weight: 600;
                         }
 
-                        > div {
-                            margin-bottom: 2rem;
-                        }
-
-                        .form-item {
-                            margin: 15px 0px;
-                        }
-
-                        .form-label {
-                            color: #344054;
-                            font-weight: 500;
-                            font-size: 16px;
+                        @media screen and (max-width: 1253px) {
+                            .divider {
+                                color: #556370;
+                                opacity: .125;
+                                width: 100px;
+                                font-weight: 600;
+                            }
                         }
 
                         .form-text {
                             margin: 6px 1rem 0px 1rem;
                         }
+                    }
 
-                        .label-hours {
-                            display: flex;
-                            flex-wrap: nowrap;
-                            flex-direction: row;
-                            width: 14%;
-                            margin-left: auto;
 
-                            .invalid-feedback {
-                                position: absolute;
-                                margin-top: 2.5rem;
-                            }
+
+                    .form-pagination {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        > button {
+                            margin: 0px 10px;
+                            border-radius: 20px;
+                            border: 1px solid #D0D5DD;
+                            font-size: 14px;
+                            font-weight: 600;
                         }
-
-                        .price-summary-cont {
-                            border: 1px solid #EAECF0;
-                            border-radius: 8px;
-                            padding: 1.5rem;
-
-                            > hr {
-                                border-color: grey;
-                                opacity: .1;
-                            }
-
-                            .price-summary .row {
-                                .col {
-                                    font-size: 18px;
-                                    display: grid;
-                                    justify-content: start;
-                                    align-content: center;
-
-                                    > span:first-child {
-                                        color: #A1A2A4;
-                                        margin: 0px 1rem 3rem 0px;
-                                    }
-                                }
-                            }
-                        }
-
-                        
-
-
-                        .form-pagination {
-                            display: flex;
-                            flex-direction: row-reverse;
-                            flex-wrap: wrap;
-                            justify-content: flex-start;
-                            align-items: center;
-
-                            > button {
-                                margin: 0px 10px;
-                                border-radius: 20px;
-                                border: 1px solid #D0D5DD;
-                                font-size: 14px;
-                                font-weight: 600;
-                            }
-                        }
+                    }
                 }
                 
             }

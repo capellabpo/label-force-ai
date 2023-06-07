@@ -13,12 +13,18 @@ import EmailOtpCodeView from "./views/EmailOtpCodeView.vue";
 import AccountCreated from "./views/AccountCreated.vue";
 import PasswordResetView from "./views/PasswordResetView.vue";
 
+// Client Dashboard
 import ClientDashoard from "./views/client/ClientDashboard.vue";
-import NewProject from "./views/client/AddNewProject.vue";
-import FileUpload from "./views/client/UploadFiles.vue";
-import LabellingOverview from "./views/client/LabellingOverview.vue";
-import LabellingHours from "./views/client/LabellingHours.vue";
-import ReviewPayment from "./views/client/ReviewPayment.vue";
+
+// New Project
+import NewProject from "./views/client/NewProject/AddNewProject.vue";
+import FileUpload from "./views/client/NewProject/UploadFiles.vue";
+import LabellingOverview from "./views/client/NewProject/LabellingOverview.vue";
+import LabellingHours from "./views/client/NewProject/LabellingHours.vue";
+import ReviewPayment from "./views/client/NewProject/ReviewPayment.vue";
+
+// Manage
+import ManageProject from "./views/client/Manage/ManageProject.vue";
 
 const app = createApp(App);
 
@@ -59,25 +65,34 @@ const router = createRouter({
         path: "/client/mydashboard",
         component: ClientDashoard,
     },
+
+    // start of new project routes 
     {
-        path: "/newproject",
+        path: "/mydashboard/newproject",
         component: NewProject,
     },
     {
-        path: "/uploadfiles",
+        path: "/mydashboard/uploadfiles",
         component: FileUpload,
     },
     {
-        path: "/labellingoverview",
+        path: "/mydashboard/labellingoverview",
         component: LabellingOverview,
     },
     {
-        path: "/labellinghours",
+        path: "/mydashboard/labellinghours",
         component: LabellingHours,
     },
     {
-        path: "/payment",
+        path: "/mydashboard/payment",
         component: ReviewPayment,
+    },
+    // end of new project routes
+
+    // start of manage routes
+    {
+        path: "/mydashboard/manageproject",
+        component: ManageProject,
     },
   ],
 });

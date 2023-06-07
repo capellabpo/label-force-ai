@@ -3,7 +3,7 @@
         <div id="side-nav-bar" class="bg-transparent col-auto col-md-3 col-md-3 min-vh-100 d-flex flex-column justify-content-between">
             <div class="bg-transparent p-2">
                 <a href="#" class="d-flex mt-1 align-items-center text-white" id="logo-item">
-                    <img class="nav-logo" src="../../assets/imgs/dashboard/labelforce_icon.png" />
+                    <img class="nav-logo" src="../../../assets/imgs/dashboard/labelforce_icon.png" />
                     <span class="fs-4 ms-3 d-none d-sm-inline" style="margin: auto;">
                         LABEL<span style="font-weight: 300;">FORCE</span> AI
                     </span>
@@ -11,7 +11,7 @@
                 <ul class="nav nav-pills flex-column mt-4">
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white" style="background-color: #101828;">
-                            <img class="profile-icon" src="../../assets/imgs/dashboard/Avatar.png" />
+                            <img class="profile-icon" src="../../../assets/imgs/dashboard/Avatar.png" />
                             <span class="fs-4 ms-3 d-none d-sm-inline">
                                 <span style="font-size: 18px; font-weight: 500;">Olivia Rhye</span>
                                 <br><span style="font-size: 14px; font-weight: 300; display: block;">olivia@untitledui.com</span>
@@ -20,26 +20,26 @@
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/Icon.png" />
+                            <img src="../../../assets/imgs/dashboard/Icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Projects</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/inbox_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/inbox_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Inbox</span>
                             <span class="inbox-count">10</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/invoices_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/invoices_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Invoices</span>
                         </a>
                     </li>
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/account_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/account_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Account</span>
                         </a>
                     </li>
@@ -50,14 +50,14 @@
                 <ul class="nav nav-pills flex-column mt-4">
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/support_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/support_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Support</span>
                         </a>
                     </li>
                     <hr id="side-nav-divider">
                     <li class="nav-item py-2 py-sm-0">
                         <a href="#" class="nav-link text-white">
-                            <img src="../../assets/imgs/dashboard/logout_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/logout_icon.png" />
                             <span class="fs-5 ms-3 d-none d-sm-inline">Logout</span>
                         </a>
                     </li>
@@ -72,8 +72,8 @@
                 <div class="row">
                     <div class="col-lg-3 left-column">
                         <div class="current-page-container">
-                            <img src="../../assets/imgs/dashboard/home_icon.png" />
-                            <img src="../../assets/imgs/dashboard/caret_right_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/home_icon.png" />
+                            <img src="../../../assets/imgs/dashboard/caret_right_icon.png" />
                             <button type="button" class="btn btn-light">New Project</button>
                         </div>
                         <div class="progress-tracker">
@@ -95,24 +95,24 @@
                             </div>
                             <div class="step">
                                 <div class="circle active"></div>
-                                <div class="line"></div>
+                                <div class="line active"></div>
                                 <div class="tracker-details active">
                                     <span>Labelling Overview</span>
                                     <span>Please provide a brief description of your project</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
-                                <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="circle active"></div>
+                                <div class="line active"></div>
+                                <div class="tracker-details active">
                                     <span>Labelling Hours</span>
                                     <span>Please type the number of hours you wish to purchase</span>
                                 </div>
                             </div>
                             <div class="step">
-                                <div class="circle"></div>
+                                <div class="circle active"></div>
                                 <div class="line"></div>
-                                <div class="tracker-details">
+                                <div class="tracker-details active">
                                     <span>Review & Payment</span>
                                 </div>
                             </div>
@@ -122,28 +122,56 @@
                     <div class="col-lg-9 right-column">
                         <form id="add-new-projects-form" action="">
                             <div class="mb-3">
-                              <label for="" class="form-label">Labelling Overview</label>
-                              <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                <label for="" class="form-label">Review & Payment</label>
+                                <!-- <textarea class="form-control" name="" id="" rows="3"></textarea> -->
                             </div>
-                            <div class="line-divider">
-                                <hr class="divider">
-                                <small class="form-text text-muted">or</small>
-                                <hr class="divider">
+                            
+                            <div class="row">
+                                <div class="col-sm-7 payment-column">
+                                    <label for="" class="form-label">Project Details</label>
+                                    <hr>
+                                    <ul>
+                                        <li>Data Type: <span>Image, Video</span></li>
+                                        <li>Label Type: <span>Bounding Box, Classification</span></li>
+                                        <li>Labelling Software: <span>Labelbox</span></li>
+                                        <li>Uploaded Files: <span>Completed</span></li>
+                                        <li>Uploaded Documents: <span>Completed</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4 payment-summary">
+                                    <div class="payment-sum-header">
+                                        <label for="" class="form-label">Payment Summary</label>
+                                        <a href="#">Edit</a>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col">
+                                            <span>$ per hour</span>
+                                            <span>Purchased Hours</span>
+                                        </div>
+                                        <div class="col">
+                                            <span>$5.00</span>
+                                            <span>10 hrs</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col">
+                                            <h3>Total</h3>
+                                            <span>for 10 hours</span>
+                                        </div>
+                                        <div class="col">
+                                            <h3>$50.00</h3>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary">Pay Now</button>
+                                </div>
                             </div>
-                            <div class="form-group files">
-                                <label for="" class="form-label">Upload Files</label>
-                                <input type="file" class="form-control" multiple="">
-                            </div>
-                            <!-- <div class="mb-3 form-item">
-                              <label for="" class="form-label">Provide a link that allows our team to access your files.</label>
-                              <input type="text" name="" id="" class="form-control" placeholder="Provide your link" aria-describedby="helpId">
-                            </div> -->
                             
                             <div class="form-pagination form-item">
                                 <!-- cancel button transitions to back -->
-                                <button @click="goToLabelHoursForm" type="button" class="btn btn-light">Next &rarr;</button>
-                                <button @click="goToLabelHoursForm" type="button" class="btn btn-light">Skip</button>
-                                <button @click="goToUploadFileForm" type="button" class="btn btn-light">&larr; Back</button>
+                                <button @click="goToStripePayment" type="button" class="btn btn-light">Next &rarr;</button>
+                                <button @click="goToLabelHoursForm" type="button" class="btn btn-light">&larr; Back</button>
                             </div>
                         </form>
                         
@@ -157,14 +185,14 @@
 
 <script>
 export default {
-    name: "LabellingOverviewForm",
+    name: "PaymentForm",
     methods: {
-        goToUploadFileForm() {
-            this.$router.push("/uploadfiles");
+        goToLabelHoursForm() {
+            this.$router.push("/mydashboard/labellinghours");
         },
 
-        goToLabelHoursForm() {
-            this.$router.push("/labellinghours");
+        goToStripePayment() {
+            // Opens a new window that re-directs to Stripe payment page
         }
     }
 }
@@ -333,94 +361,104 @@ export default {
                     align-items: stretch;
                     justify-content: space-between;
 
-                    .form-item {
-                        margin: 15px 0px;
-                    }
-
-                    .form-label {
-                        color: #344054;
-                        font-weight: 500;
-                        font-size: 16px;
-                    }
-
-                    .files input {
-                        -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
-                        transition: outline-offset .15s ease-in-out, background-color .15s linear;
-                        padding: 50px 0px 90px 25%;
-                        text-align: center !important;
-                        margin: 0;
-                        width: 100% !important;
-                    }
-                    
-                    .files{ 
-                        position:relative
-                    }
-
-                    .files:before {
-                        position: absolute;
-                        bottom: 10px;
-                        left: 0;  
-                        pointer-events: none;
-                        width: 100%;
-                        right: 0;
-                        height: 57px;
-                        content: "Drag and drop files here";
-                        display: block;
-                        margin: 0 auto;
-                        color: #053CD3;
-                        font-weight: 600;
-                        text-transform: capitalize;
-                        text-align: center;
-                    }
-
-                    
-                    .line-divider {
-                        display: flex;
-                        justify-content: center;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        align-items: stretch;
-                        font-weight: 700;
-                        padding: 2rem 0px 2rem 0px;
-
-                        .divider {
-                            color: #556370;
-                            opacity: .125;
-                            width: 250px;
-                            font-weight: 600;
+                        .btn-light {
+                            --bs-btn-hover-color: #FFFFFF;
+                            --bs-btn-hover-bg: #1F5AFA;
+                            --bs-btn-hover-border-color: #1F5AFA;
                         }
 
-                        @media screen and (max-width: 1253px) {
-                            .divider {
-                                color: #556370;
-                                opacity: .125;
-                                width: 100px;
+                        > div {
+                            margin-bottom: 2rem;
+                        }
+
+                        .form-item {
+                            margin: 15px 0px;
+                        }
+
+                        .form-label {
+                            color: #344054;
+                            font-weight: 500;
+                            font-size: 16px;
+                        }
+
+                        .row {
+
+                            > div:first-child {
+                                margin-right: 1rem;
+                            }
+
+                            .payment-column {
+                                border: 1px solid #EAECF0;
+                                border-radius: 8px;
+                                padding: 1rem;
+
+                                > hr {
+                                    border-color: grey;
+                                    opacity: .1;
+                                }
+
+                                > ul li {
+                                    margin-bottom: 1rem;
+
+                                    > span {
+                                        color: #475467;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+
+                            .payment-summary {
+                                border: 1px solid #EAECF0;
+                                border-radius: 8px;
+                                padding: 1rem;
+
+                                .payment-sum-header {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content:  space-between;
+                                }
+
+                                .row .col {
+                                    font-size: 14px;
+                                    display: grid;
+                                    /* justify-content: start;
+                                    align-content: center; */
+
+                                    > span:first-child {
+                                        color: #A1A2A4;
+                                        margin: 0px 1rem 1rem 0px;
+                                    }
+                                }
+
+                                .btn-primary {
+                                    width: 100%;
+                                    border-radius: 20px;
+                                    font-size: 18px;
+                                    margin-top: 10px;
+                                }
+                            }
+
+                        }
+                        
+
+                    
+
+                        .form-pagination {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-items: center;
+                            margin-left: 71%;
+
+                            > button {
+                                margin: 0px 10px;
+                                border-radius: 20px;
+                                border: 1px solid #D0D5DD;
+                                font-size: 14px;
                                 font-weight: 600;
                             }
                         }
-
-                        .form-text {
-                            margin: 6px 1rem 0px 1rem;
-                        }
-                    }
-
-
-
-                    .form-pagination {
-                        display: flex;
-                        flex-direction: row-reverse;
-                        flex-wrap: wrap;
-                        justify-content: flex-start;
-                        align-items: center;
-
-                        > button {
-                            margin: 0px 10px;
-                            border-radius: 20px;
-                            border: 1px solid #D0D5DD;
-                            font-size: 14px;
-                            font-weight: 600;
-                        }
-                    }
                 }
                 
             }
