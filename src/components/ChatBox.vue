@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-<div class="row clearfix">
-    <div class="col-lg-12">
-        <div class="card chat-app">
-            <!-- <div id="plist" class="people-list">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card chat-app">
+                    <!-- <div id="plist" class="people-list">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-search"></i></span>
@@ -55,8 +55,8 @@
                     </li>
                 </ul>
             </div> -->
-            <div class="chat">
-                <!-- <div class="chat-header clearfix">
+                    <div class="chat">
+                        <!-- <div class="chat-header clearfix">
                     <div class="row">
                         <div class="col-lg-6">
                             <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
@@ -75,50 +75,52 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="chat-history">
-                    <ul class="m-b-0">
-                        <li class="clearfix">
-                            <div class="my-message-data text-right">
-                                <span class="my-message-data-time">10:10 AM, Today</span><br>
-                                <!-- <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar"> -->
+                        <div class="chat-history">
+                            <ul class="m-b-0">
+                                <li class="clearfix">
+                                    <div class="my-message-data text-right">
+                                        <span class="my-message-data-time">10:10 AM, Today</span><br>
+                                        <!-- <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar"> -->
+                                    </div>
+                                    <div class="message other-message float-right"> Hi Chariz, how are you?</div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="message-data">
+                                        <span class="message-data-time">10:12 AM, Today</span>
+                                    </div>
+                                    <div class="message my-message">Are we meeting today?</div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="message-data">
+                                        <span class="message-data-time">10:15 AM, Today</span>
+                                    </div>
+                                    <div class="message my-message">Project is still on going, I can show you an update if
+                                        you're available.</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <div class="chat-message clearfix">
+                            <div class="input-group mb-0">
+                                <input type="text" class="form-control" placeholder="Message">
                             </div>
-                            <div class="message other-message float-right"> Hi Chariz, how are you?</div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="message-data">
-                                <span class="message-data-time">10:12 AM, Today</span>
-                            </div>
-                            <div class="message my-message">Are we meeting today?</div>                                    
-                        </li>                               
-                        <li class="clearfix">
-                            <div class="message-data">
-                                <span class="message-data-time">10:15 AM, Today</span>
-                            </div>
-                            <div class="message my-message">Project is still on going, I can show you an update if you're available.</div>
-                        </li>
-                    </ul>
-                </div>
-                <hr>
-                <div class="chat-message clearfix">
-                    <div class="input-group mb-0">
-                        <input type="text" class="form-control" placeholder="Message">
+                            <button type="button" class="btn btn-primary">
+                                <i class="fa fa-paper-plane-o fa-lg" aria-hidden="true"></i>
+                            </button>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-primary">
-                        <i class="fa fa-paper-plane-o fa-lg" aria-hidden="true"></i>
-                    </button>         
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-  </template>
+</template>
   
-  <style>
-  body{
+<style scoped>
+body {
     background-color: #F9FAFB;
-    margin-top:20px;
+    margin-top: 20px;
 }
+
 .card {
     background: #F9FAFB;
     transition: .5s;
@@ -398,6 +400,7 @@
     .chat {
         width: 250px;
     }
+
     .chat-app .people-list {
         height: 465px;
         width: 100%;
@@ -406,15 +409,19 @@
         left: -400px;
         display: none
     }
+
     .chat-app .people-list.open {
         left: 0
     }
+
     .chat-app .chat {
         margin: 0
     }
+
     .chat-app .chat .chat-header {
         border-radius: 0.55rem 0.55rem 0 0
     }
+
     .chat-app .chat-history {
         height: 300px;
         overflow-x: auto
@@ -425,11 +432,12 @@
     .chat {
         width: 500px;
     }
-    
+
     .chat-app .chat-list {
         height: 650px;
         overflow-x: auto
     }
+
     .chat-app .chat-history {
         height: 600px;
         overflow-x: auto
@@ -441,13 +449,13 @@
         height: 480px;
         overflow-x: auto
     }
+
     .chat-app .chat-history {
         height: calc(100vh - 350px);
         overflow-x: auto
     }
-}
-  </style>
+}</style>
   
-  <script>
-  
-  </script>
+<script>
+
+</script>

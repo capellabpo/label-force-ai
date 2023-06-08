@@ -1,6 +1,7 @@
 <template>
     <div class="container-fluid">
-        <div id="side-nav-bar" class="bg-transparent col-auto col-md-3 col-md-3 min-vh-100 d-flex flex-column justify-content-between">
+        <div id="side-nav-bar"
+            class="bg-transparent col-auto col-md-3 col-md-3 min-vh-100 d-flex flex-column justify-content-between">
             <div class="bg-transparent p-2">
                 <a href="#" class="d-flex mt-1 align-items-center text-white" id="logo-item">
                     <img class="nav-logo" src="../../../assets/imgs/dashboard/labelforce_icon.png" />
@@ -14,7 +15,8 @@
                             <img class="profile-icon" src="../../../assets/imgs/dashboard/Avatar.png" />
                             <span class="fs-4 ms-3 d-none d-sm-inline">
                                 <span style="font-size: 18px; font-weight: 500;">Olivia Rhye</span>
-                                <br><span style="font-size: 14px; font-weight: 300; display: block;">olivia@untitledui.com</span>
+                                <br><span
+                                    style="font-size: 14px; font-weight: 300; display: block;">olivia@untitledui.com</span>
                             </span>
                         </a>
                     </li>
@@ -79,19 +81,21 @@
                         <span><i class="fa fa-circle fa-2xs" aria-hidden="true"></i> Ongoing</span>
                     </div>
                     <div class="description">
-                        <small id="helpId" class="form-text text-muted">The project will require creating an annotation tool or utilizing existing tools to annotate the images <br>
+                        <small id="helpId" class="form-text text-muted">The project will require creating an annotation tool
+                            or utilizing existing tools to annotate the images <br>
                             with bounding boxes, polygons, or keypoints.</small>
                     </div>
                 </div>
-                
+
                 <div class="btn-container">
-                    <button type="button" class="btn btn-primary"><i class="fa fa-bar-chart" aria-hidden="true"></i> Overview</button>
+                    <button type="button" class="btn btn-primary"><i class="fa fa-bar-chart" aria-hidden="true"></i>
+                        Overview</button>
                     <button type="button" class="btn btn-primary">Inbox <span class="inbox-count">10</span></button>
                     <button type="button" class="btn btn-primary">Files</button>
                 </div>
 
                 <hr class="divider">
-                
+
                 <div class="upload-form-container">
                     <uploading-file-form></uploading-file-form>
                 </div>
@@ -210,7 +214,7 @@ export default {
                 .title {
                     display: flex;
 
-                    > span {
+                    >span {
                         margin: 0px 0px 13px 1rem;
                         padding: 5px 10px;
                         border: 1px solid #FFFFFF;
@@ -259,7 +263,4 @@ export default {
         }
     }
 }
-
-
-
 </style>

@@ -49,7 +49,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #add-files-form {
     width: 100%;
 }
