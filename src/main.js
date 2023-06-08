@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import App from './App.vue';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
+import '../node_modules/bootstrap/dist/js/bootstrap';
 import './assets/css/custom.css';
 
 import LoginView from "./views/LoginView.vue";
@@ -25,6 +26,9 @@ import ReviewPayment from "./views/client/NewProject/ReviewPayment.vue";
 
 // Manage
 import ManageProject from "./views/client/Manage/ManageProject.vue";
+import Inbox from "./views/client/Manage/Inbox.vue";
+import ProjectFiles from "./views/client/Manage/ProjectFileUpload.vue";
+import TestComponent from "./views/client/Manage/TestComponent.vue";
 
 const app = createApp(App);
 
@@ -93,6 +97,18 @@ const router = createRouter({
     {
         path: "/mydashboard/manageproject",
         component: ManageProject,
+    },
+    {
+        path: "/mydashboard/inbox",
+        component: Inbox,
+    },
+    {
+        path: "/mydashboard/files",
+        component: ProjectFiles,
+    },
+    {
+        path: "/mydashboard/test",
+        component: TestComponent,
     },
   ],
 });

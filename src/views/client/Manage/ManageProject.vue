@@ -127,10 +127,27 @@
                     <small id="helpId" class="form-text text-muted">Monitor and track the progress of your project.</small>
                 
                     <div class="row">
-                        <div class="col-progress col-sm-8">
+                        <div class="col-progress col-sm-6">
                             <half-circle-progress></half-circle-progress>
+                            <div class="row hours-count">
+                                <div class="col col-sm-4 hours-purchased">
+                                    <i class="fa fa-clock-o fa-2xl" aria-hidden="true"></i>
+                                    <div>
+                                        <h3>20 hrs</h3>
+                                        <small id="helpId" class="form-text text-muted">Hours Purchased</small>
+                                    </div>
+
+                                </div>
+                                <div class="col col-sm-4 hours-remaining">
+                                    <i class="fa fa-hourglass-end fa-2xl" aria-hidden="true"></i>
+                                    <div>
+                                        <h3>20 hrs</h3>
+                                        <small id="helpId" class="form-text text-muted">Hours Purchased</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col col-sm-2">
+                        <div class="col col-sm-3">
                             <div class="total-hours">
                                 <h5>$100.00</h5>
                                 <small id="helpId" class="form-text text-muted">Project Total Hours</small>
@@ -139,9 +156,124 @@
                                 <h5>$100.00</h5>
                                 <small id="helpId" class="form-text text-muted">Subtotal</small>
                             </div>
-                            <button class="btn btn-primary" >
+                            <div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buy-hours-modal">
                                     Buy Hours
-                            </button>
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="buy-hours-modal" tabindex="-1" aria-labelledby="buy-hours-modal-label" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content" style="width: 85%;">
+                                        <div class="modal-header">
+                                            <div style="display: flex;
+                                                flex-direction: column;
+                                                align-items: flex-start;"
+                                            >
+                                                <div style="display: flex;
+                                                    flex-direction: row;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    margin: 0px 0px 15px 0px;"
+                                                >
+                                                    <i class="fa fa-clock-o fa-xl" aria-hidden="true"
+                                                        style="padding: 18px 8px 16px 8px;
+                                                        border: 1px solid #2BC78F;
+                                                        border-radius: 18px;
+                                                        background-color: #2BC78F;
+                                                        color: #FFFFFF;"
+                                                    ></i>
+                                                    <h5 class="modal-title" id="buy-hours-modal-label"
+                                                        style="margin: 0px 12rem 0px 10px;
+                                                        padding: 0px;"
+                                                    >Labelling Hours</h5>
+                                                </div>
+                                                
+                                                <small id="helpId" class="form-text text-muted">Please let us know the number of hours you would like to purchase</small>
+                                            </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                                style="
+                                                position: relative;
+                                                bottom: 55px;
+                                            ">
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div style="display: flex;
+                                                flex-direction: row;
+                                                flex-wrap: nowrap;
+                                                justify-content: center;"
+                                                
+                                            >
+                                                <button @click.prevent="decrement" type="button" class="btn btn-light"
+                                                    style="width: 12%;
+                                                    height: 50px;
+                                                    margin: 0px 1rem 0px 0px;
+                                                    border-radius: 10px;"
+                                                >
+                                                    <span class="fa fa-minus"></span>
+                                                </button>
+                                                <input type="text" name="quant[1]" class="form-control input-number" v-model="hourcount" min="1" max="11"
+                                                    :class = "(hourcount >= 11) ? 'is-invalid' : ''"
+                                                    style="width: 18%;"
+                                                >
+                                                <button @click.prevent="increment" type="button" class="btn btn-light"
+                                                :class = "(hourcount >= 11) ? 'disabled' : ''" 
+                                                style="width: 12%;
+                                                    height: 50px;
+                                                    margin: 0px 0px 0px 1rem;
+                                                    border-radius: 10px;"
+                                                >
+                                                    <span class="fa fa-plus"></span>
+                                                </button>
+                                                <!-- <div class="invalid-feedback">
+                                                    The minimum is 10 hours.
+                                                </div> -->
+                                            </div>
+                                            <hr>
+                                            <div class="row" 
+                                                style="margin: 0px 2rem 0px 2rem;"
+                                            >
+                                                <div class="col">
+                                                    <h6 style="color: #A1A2A4">Subtotal</h6>
+                                                    <h6>Total</h6>
+                                                </div>
+                                                <div class="col"
+                                                    style="display: flex;
+                                                    flex-direction: column;
+                                                    align-content: flex-end;
+                                                    align-items: flex-end;"
+                                                >
+                                                    <h6 style="color: #A1A2A4">$5.00</h6>
+                                                    <h6>$15.00</h6>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="modal-footer"
+                                            style="display: flex;
+                                            flex-wrap: wrap;
+                                            flex-direction: row;
+                                            justify-content: center;"
+                                        >
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                                style="width: 45%;
+                                                    margin-top: 10px;
+                                                    border-radius: 8px;
+                                                    padding: 10px;"
+                                            >Cancel</button>
+                                            <button type="button" class="btn btn-primary"
+                                                style="width: 45%;
+                                                    margin-top: 10px;
+                                                    border-radius: 8px;
+                                                    padding: 10px;"
+                                            >Proceed to payment</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                                
                         </div>
                     </div>
                 </div>
@@ -213,9 +345,14 @@ import HalfCircleProgress from '../../../components/HalfCircleProgress.vue';
 
 export default {
     name: "NewPoject",
+    data() {
+        return {
+            hourcount: 1
+        }
+    },
     components: {
         HalfCircleProgress
-     },
+    },
     methods: {
         goBackToDashboard() {
             this.$router.push("/client/mydashboard");
@@ -223,6 +360,16 @@ export default {
 
         goToUploadFileForm() {
             this.$router.push("/mydashboard/uploadfiles");
+        },
+
+        increment () {
+            this.hourcount++;
+        },
+        
+        decrement () {
+            if(this.hourcount > 1) {
+                this.hourcount-- ;
+            }
         }
     }
 }
@@ -389,7 +536,7 @@ export default {
             }
 
             .project-hrs-kpi {
-                width: 85%;
+                width: 100%;
                 padding-top: 1.5rem;
                 
                 > h5 {
@@ -397,8 +544,56 @@ export default {
                 }
 
                 .row {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
                     .col-progress {
-                        /*  */
+                        .container {
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: nowrap;
+                            align-content: center;
+                            align-items: center;
+
+                            
+                        }
+
+                        .hours-count {
+                            justify-content: center;
+
+                            .hours-purchased, .hours-remaining {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                .fa {
+                                    margin-right: 15px;
+                                    
+                                    border-radius: 25px;
+                                    color: #FFFFFF;
+                                }
+
+                                .fa-clock-o {
+                                    padding: 23px 10px;
+                                    border: 1px solid #2BC78F;
+                                    background-color: #2BC78F;
+
+                                }
+
+                                .fa-hourglass-end {
+                                    padding: 23px 13px;
+                                    border: 1px solid #C12300;
+                                    background-color: #C12300;
+                                }
+
+                                > div > h3 {
+                                    margin-bottom: 0px;
+                                }
+                                
+                            }
+                        }
                     }
 
                     .col {
@@ -411,6 +606,7 @@ export default {
                             border: 1px solid #FAFAFA;
                             border-radius: 8px;
                             background-color: #FAFAFA;
+                            width: 65%;
 
                             > h5 {
                                 padding: 1rem 0px 0px 0px;
@@ -422,7 +618,7 @@ export default {
                         }
                         .btn {
                             margin-top: 10px;
-                            width: 100%;
+                            width: 65%;
                             border-radius: 18px;
                         }
 
