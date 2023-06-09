@@ -1,72 +1,9 @@
 <template>
     <div class="container-fluid">
-        <div id="side-nav-bar" class="bg-transparent col-auto col-md-3 col-md-3 min-vh-100 d-flex flex-column justify-content-between">
-            <div class="bg-transparent p-2">
-                <a href="#" class="d-flex mt-1 align-items-center text-white" id="logo-item">
-                    <img class="nav-logo" src="../../../assets/imgs/dashboard/labelforce_icon.png" />
-                    <span class="fs-4 ms-3 d-none d-sm-inline" style="margin: auto;">
-                        LABEL<span style="font-weight: 300;">FORCE</span> AI
-                    </span>
-                </a>
-                <ul class="nav nav-pills flex-column mt-4">
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white" style="background-color: #101828;">
-                            <img class="profile-icon" src="../../../assets/imgs/dashboard/Avatar.png" />
-                            <span class="fs-4 ms-3 d-none d-sm-inline">
-                                <span style="font-size: 18px; font-weight: 500;">Olivia Rhye</span>
-                                <br><span style="font-size: 14px; font-weight: 300; display: block;">olivia@untitledui.com</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/Icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Projects</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/inbox_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Inbox</span>
-                            <span class="inbox-count">10</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/invoices_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Invoices</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/account_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Account</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-transparent p-2" id="sidenav-lower-links">
-                <ul class="nav nav-pills flex-column mt-4">
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/support_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Support</span>
-                        </a>
-                    </li>
-                    <hr id="side-nav-divider">
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/logout_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Logout</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <side-navigation-bar></side-navigation-bar>
 
         <div class="p-3 content">
-            
+
             <div class="container">
 
                 <div class="row">
@@ -122,30 +59,45 @@
                     <div class="col-lg-9 right-column">
                         <form id="add-new-projects-form" action="">
                             <div class="mb-3 form-item">
-                              <label for="" class="form-label">Project Name</label>
-                              <input type="text" name="" id="" class="form-control" placeholder="Enter Project Name" aria-describedby="helpId" required>
+                                <label for="" class="form-label">Project Name</label>
+                                <input type="text" name="" id="" class="form-control" placeholder="Enter Project Name"
+                                    aria-describedby="helpId" required>
                             </div>
 
                             <div class="mb-3 form-item">
                                 <label for="" class="form-label">Data Type</label>
                                 <div class="datatype-btns">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../../assets/imgs/dashboard/table_icons/image_icon.png"/> Image
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="button"
+                                        aria-pressed="false" autocomplete="off">
+                                        <img class="datatype-icons"
+                                            src="../../../assets/imgs/dashboard/table_icons/image_icon.png" /> Image
                                     </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../../assets/imgs/dashboard/table_icons/video_camera_icon.png"/> Video
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="button"
+                                        aria-pressed="false" autocomplete="off">
+                                        <img class="datatype-icons"
+                                            src="../../../assets/imgs/dashboard/table_icons/video_camera_icon.png" /> Video
                                     </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../../assets/imgs/dashboard/table_icons/underlined_letter_icon.png"/> Text
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="button"
+                                        aria-pressed="false" autocomplete="off">
+                                        <img class="datatype-icons"
+                                            src="../../../assets/imgs/dashboard/table_icons/underlined_letter_icon.png" />
+                                        Text
                                     </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../../assets/imgs/dashboard/table_icons/file_icone.png"/> Document
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="button"
+                                        aria-pressed="false" autocomplete="off">
+                                        <img class="datatype-icons"
+                                            src="../../../assets/imgs/dashboard/table_icons/file_icone.png" /> Document
                                     </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../../assets/imgs/dashboard/table_icons/suitcase_icon.png"/> Dicom/Medical
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="button"
+                                        aria-pressed="false" autocomplete="off">
+                                        <img class="datatype-icons"
+                                            src="../../../assets/imgs/dashboard/table_icons/suitcase_icon.png" />
+                                        Dicom/Medical
                                     </button>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off">
-                                        <img class="datatype-icons" src="../../../assets/imgs/dashboard/table_icons/tripledot_icon.png"/> Others
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="button"
+                                        aria-pressed="false" autocomplete="off">
+                                        <img class="datatype-icons"
+                                            src="../../../assets/imgs/dashboard/table_icons/tripledot_icon.png" /> Others
                                     </button>
                                 </div>
                             </div>
@@ -158,9 +110,10 @@
                                     <option value="2">Two</option>
                                     <option value="3">Three</option>
                                 </select>
-                                <small id="helpId" class="form-text text-muted">Select all label types based on the specific requirements of your project.</small>
+                                <small id="helpId" class="form-text text-muted">Select all label types based on the specific
+                                    requirements of your project.</small>
                             </div>
-                            
+
                             <div class="label-soft-cont form-item">
                                 <label for="" class="form-label">Labelling Software</label>
                                 <select class="form-select" aria-label="Default select example" required>
@@ -170,14 +123,15 @@
                                     <option value="3">Three</option>
                                 </select>
                             </div>
-                            
+
                             <div class="form-pagination form-item">
                                 <!-- cancel button transitions to back -->
                                 <button @click="goToUploadFileForm" type="button" class="btn btn-light">Next &rarr;</button>
-                                <button @click="goBackToDashboard" type="button" class="btn btn-light">&larr; Cancel</button>
+                                <button @click="goBackToDashboard" type="button" class="btn btn-light">&larr;
+                                    Cancel</button>
                             </div>
                         </form>
-                        
+
                     </div>
                 </div>
 
@@ -187,20 +141,13 @@
 </template>
 
 <script>
-// JavaScript for progress tracker
-// function nextStep() {
-//     const steps = document.querySelectorAll('.step');
-//     for (let i = 0; i < steps.length; i++) {
-//     if (!steps[i].querySelector('.circle').classList.contains('active')) {
-//         steps[i].querySelector('.circle').classList.add('active');
-//         steps[i].querySelector('.line').classList.add('active');
-//         break;
-//     }
-//     }
-// }
+import SideNavigationBar from '../../../components/SideNavigationBar.vue'
 
 export default {
     name: "NewPoject",
+    components: {
+        SideNavigationBar
+    },
     methods: {
         goBackToDashboard() {
             this.$router.push("/client/mydashboard");
@@ -215,57 +162,9 @@ export default {
 
 <style scoped>
 .container-fluid {
-    /* font-family: 'Inter';
-    font-style: normal; */
     background-color: #101828;
     display: flex;
     padding: 0;
-
-    /* .profile-icon {
-        width: 5%;
-        height: 5%;
-    } */
-
-    #side-nav-bar {
-        max-width: 240px;
-        color: #101828;
-
-        #logo-item {
-            text-decoration: none;
-        }
-
-        .nav-pills li a:hover {
-            background-color: rgba(31, 90, 250, 0.37);
-        }
-
-        .nav-logo {
-            margin: auto;
-        }
-
-        .nav-link {
-            display: flex;
-            /* align-content: center; */
-            align-items: center;
-
-            .inbox-count {
-                background-color: #264DDB;
-                padding: 2px 3px;
-                border-radius: 16px;
-                width: 36px;
-                margin: 0px 0px 0px auto;
-                text-align: -webkit-center;
-                height: 25px;
-                font-size: 14px;
-            }
-        }
-
-        #sidenav-lower-links {
-            #side-nav-divider {
-                border-width: 2px;
-                color: #264DDB;
-            }
-        }
-    }
 
     .content {
         font-size: 14px;
@@ -287,7 +186,13 @@ export default {
             border-radius: 40px 0px 0px 0px;
             background-color: #FFFFFF;
 
-            > label, h1, h2, h3, h4, h5, h6 {
+            >label,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
                 color: #101828;
             }
 
@@ -312,7 +217,7 @@ export default {
                 flex-wrap: wrap;
                 align-items: flex-start;
                 margin: 5rem 0px 15px 0px;
-                
+
                 .step {
                     display: flex;
                     margin-bottom: 20px;
@@ -362,7 +267,7 @@ export default {
                 }
 
             }
-                
+
             .right-column {
                 color: #344054;
 
@@ -411,7 +316,7 @@ export default {
                         }
                     }
 
-                    .datatype-btns > * {
+                    .datatype-btns>* {
                         padding: 15px;
                         margin: 15px 10px;
                     }
@@ -423,7 +328,7 @@ export default {
                         justify-content: flex-start;
                         align-items: center;
 
-                        > button {
+                        >button {
                             margin: 0px 10px;
                             border-radius: 20px;
                             border: 1px solid #D0D5DD;
@@ -432,7 +337,7 @@ export default {
                         }
                     }
                 }
-                
+
             }
 
             /* .current-page-container {
@@ -448,8 +353,4 @@ export default {
 
         }
     }
-}
-
-
-
-</style>
+}</style>

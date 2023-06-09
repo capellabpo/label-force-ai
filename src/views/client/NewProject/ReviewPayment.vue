@@ -1,74 +1,9 @@
 <template>
     <div class="container-fluid">
-        <div id="side-nav-bar" class="bg-transparent col-auto col-md-3 col-md-3 min-vh-100 d-flex flex-column justify-content-between">
-            <div class="bg-transparent p-2">
-                <a href="#" class="d-flex mt-1 align-items-center text-white" id="logo-item">
-                    <img class="nav-logo" src="../../../assets/imgs/dashboard/labelforce_icon.png" />
-                    <span class="fs-4 ms-3 d-none d-sm-inline" style="margin: auto;">
-                        LABEL<span style="font-weight: 300;">FORCE</span> AI
-                    </span>
-                </a>
-                <ul class="nav nav-pills flex-column mt-4">
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white" style="background-color: #101828;">
-                            <img class="profile-icon" src="../../../assets/imgs/dashboard/Avatar.png" />
-                            <span class="fs-4 ms-3 d-none d-sm-inline">
-                                <span style="font-size: 18px; font-weight: 500;">Olivia Rhye</span>
-                                <br><span style="font-size: 14px; font-weight: 300; display: block;">olivia@untitledui.com</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/Icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Projects</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/inbox_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Inbox</span>
-                            <span class="inbox-count">10</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/invoices_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Invoices</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/account_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Account</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-transparent p-2" id="sidenav-lower-links">
-                <ul class="nav nav-pills flex-column mt-4">
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/support_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Support</span>
-                        </a>
-                    </li>
-                    <hr id="side-nav-divider">
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/logout_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Logout</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <side-navigation-bar></side-navigation-bar>
 
         <div class="p-3 content">
-            
             <div class="container">
-
                 <div class="row">
                     <div class="col-lg-3 left-column">
                         <div class="current-page-container">
@@ -125,7 +60,7 @@
                                 <label for="" class="form-label">Review & Payment</label>
                                 <!-- <textarea class="form-control" name="" id="" rows="3"></textarea> -->
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-sm-7 payment-column">
                                     <label for="" class="form-label">Project Details</label>
@@ -167,14 +102,14 @@
                                     <button type="button" class="btn btn-primary">Pay Now</button>
                                 </div>
                             </div>
-                            
+
                             <div class="form-pagination form-item">
                                 <!-- cancel button transitions to back -->
                                 <button @click="goToStripePayment" type="button" class="btn btn-light">Next &rarr;</button>
                                 <button @click="goToLabelHoursForm" type="button" class="btn btn-light">&larr; Back</button>
                             </div>
                         </form>
-                        
+
                     </div>
                 </div>
 
@@ -184,8 +119,13 @@
 </template>
 
 <script>
+import SideNavigationBar from '../../../components/SideNavigationBar.vue'
+
 export default {
     name: "PaymentForm",
+    components: {
+        SideNavigationBar
+    },
     methods: {
         goToLabelHoursForm() {
             this.$router.push("/mydashboard/labellinghours");
@@ -200,57 +140,9 @@ export default {
 
 <style scoped>
 .container-fluid {
-    /* font-family: 'Inter';
-    font-style: normal; */
     background-color: #101828;
     display: flex;
     padding: 0;
-
-    /* .profile-icon {
-        width: 5%;
-        height: 5%;
-    } */
-
-    #side-nav-bar {
-        max-width: 240px;
-        color: #101828;
-
-        #logo-item {
-            text-decoration: none;
-        }
-
-        .nav-pills li a:hover {
-            background-color: rgba(31, 90, 250, 0.37);
-        }
-
-        .nav-logo {
-            margin: auto;
-        }
-
-        .nav-link {
-            display: flex;
-            /* align-content: center; */
-            align-items: center;
-
-            .inbox-count {
-                background-color: #264DDB;
-                padding: 2px 3px;
-                border-radius: 16px;
-                width: 36px;
-                margin: 0px 0px 0px auto;
-                text-align: -webkit-center;
-                height: 25px;
-                font-size: 14px;
-            }
-        }
-
-        #sidenav-lower-links {
-            #side-nav-divider {
-                border-width: 2px;
-                color: #264DDB;
-            }
-        }
-    }
 
     .content {
         font-size: 14px;
@@ -293,7 +185,7 @@ export default {
                 flex-wrap: wrap;
                 align-items: flex-start;
                 margin: 5rem 0px 15px 0px;
-                
+
                 .step {
                     display: flex;
                     margin-bottom: 20px;
@@ -343,7 +235,7 @@ export default {
                 }
 
             }
-                
+
             .right-column {
                 color: #344054;
 
@@ -361,106 +253,106 @@ export default {
                     align-items: stretch;
                     justify-content: space-between;
 
-                        .btn-light {
-                            --bs-btn-hover-color: #FFFFFF;
-                            --bs-btn-hover-bg: #1F5AFA;
-                            --bs-btn-hover-border-color: #1F5AFA;
+                    .btn-light {
+                        --bs-btn-hover-color: #FFFFFF;
+                        --bs-btn-hover-bg: #1F5AFA;
+                        --bs-btn-hover-border-color: #1F5AFA;
+                    }
+
+                    >div {
+                        margin-bottom: 2rem;
+                    }
+
+                    .form-item {
+                        margin: 15px 0px;
+                    }
+
+                    .form-label {
+                        color: #344054;
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+
+                    .row {
+
+                        >div:first-child {
+                            margin-right: 1rem;
                         }
 
-                        > div {
-                            margin-bottom: 2rem;
-                        }
+                        .payment-column {
+                            border: 1px solid #EAECF0;
+                            border-radius: 8px;
+                            padding: 1rem;
 
-                        .form-item {
-                            margin: 15px 0px;
-                        }
-
-                        .form-label {
-                            color: #344054;
-                            font-weight: 500;
-                            font-size: 16px;
-                        }
-
-                        .row {
-
-                            > div:first-child {
-                                margin-right: 1rem;
+                            >hr {
+                                border-color: grey;
+                                opacity: .1;
                             }
 
-                            .payment-column {
-                                border: 1px solid #EAECF0;
-                                border-radius: 8px;
-                                padding: 1rem;
+                            >ul li {
+                                margin-bottom: 1rem;
 
-                                > hr {
-                                    border-color: grey;
-                                    opacity: .1;
-                                }
-
-                                > ul li {
-                                    margin-bottom: 1rem;
-
-                                    > span {
-                                        color: #475467;
-                                        font-weight: 600;
-                                    }
+                                >span {
+                                    color: #475467;
+                                    font-weight: 600;
                                 }
                             }
+                        }
 
-                            .payment-summary {
-                                border: 1px solid #EAECF0;
-                                border-radius: 8px;
-                                padding: 1rem;
+                        .payment-summary {
+                            border: 1px solid #EAECF0;
+                            border-radius: 8px;
+                            padding: 1rem;
 
-                                .payment-sum-header {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content:  space-between;
-                                }
+                            .payment-sum-header {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                            }
 
-                                .row .col {
-                                    font-size: 14px;
-                                    display: grid;
-                                    /* justify-content: start;
+                            .row .col {
+                                font-size: 14px;
+                                display: grid;
+                                /* justify-content: start;
                                     align-content: center; */
 
-                                    > span:first-child {
-                                        color: #A1A2A4;
-                                        margin: 0px 1rem 1rem 0px;
-                                    }
-                                }
-
-                                .btn-primary {
-                                    width: 100%;
-                                    border-radius: 20px;
-                                    font-size: 18px;
-                                    margin-top: 10px;
+                                >span:first-child {
+                                    color: #A1A2A4;
+                                    margin: 0px 1rem 1rem 0px;
                                 }
                             }
 
-                        }
-                        
-
-                    
-
-                        .form-pagination {
-                            display: flex;
-                            flex-direction: row-reverse;
-                            flex-wrap: wrap;
-                            justify-content: center;
-                            align-items: center;
-                            margin-left: 71%;
-
-                            > button {
-                                margin: 0px 10px;
+                            .btn-primary {
+                                width: 100%;
                                 border-radius: 20px;
-                                border: 1px solid #D0D5DD;
-                                font-size: 14px;
-                                font-weight: 600;
+                                font-size: 18px;
+                                margin-top: 10px;
                             }
                         }
+
+                    }
+
+
+
+
+                    .form-pagination {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 71%;
+
+                        >button {
+                            margin: 0px 10px;
+                            border-radius: 20px;
+                            border: 1px solid #D0D5DD;
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
+                    }
                 }
-                
+
             }
 
             /* .current-page-container {
@@ -477,7 +369,4 @@ export default {
         }
     }
 }
-
-
-
 </style>

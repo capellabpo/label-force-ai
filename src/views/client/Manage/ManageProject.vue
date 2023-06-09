@@ -1,71 +1,6 @@
 <template>
     <div class="container-fluid">
-        <div id="side-nav-bar"
-            class="bg-transparent col-auto col-md-3 col-md-3 min-vh-100 d-flex flex-column justify-content-between">
-            <div class="bg-transparent p-2">
-                <a href="#" class="d-flex mt-1 align-items-center text-white" id="logo-item">
-                    <img class="nav-logo" src="../../../assets/imgs/dashboard/labelforce_icon.png" />
-                    <span class="fs-4 ms-3 d-none d-sm-inline" style="margin: auto;">
-                        LABEL<span style="font-weight: 300;">FORCE</span> AI
-                    </span>
-                </a>
-                <ul class="nav nav-pills flex-column mt-4">
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white" style="background-color: #101828;">
-                            <img class="profile-icon" src="../../../assets/imgs/dashboard/Avatar.png" />
-                            <span class="fs-4 ms-3 d-none d-sm-inline">
-                                <span style="font-size: 18px; font-weight: 500;">Olivia Rhye</span>
-                                <br><span
-                                    style="font-size: 14px; font-weight: 300; display: block;">olivia@untitledui.com</span>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/Icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Projects</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/inbox_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Inbox</span>
-                            <span class="inbox-count">10</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/invoices_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Invoices</span>
-                        </a>
-                    </li>
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/account_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Account</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-transparent p-2" id="sidenav-lower-links">
-                <ul class="nav nav-pills flex-column mt-4">
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/support_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Support</span>
-                        </a>
-                    </li>
-                    <hr id="side-nav-divider">
-                    <li class="nav-item py-2 py-sm-0">
-                        <a href="#" class="nav-link text-white">
-                            <img src="../../../assets/imgs/dashboard/logout_icon.png" />
-                            <span class="fs-5 ms-3 d-none d-sm-inline">Logout</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <side-navigation-bar></side-navigation-bar>
 
         <div class="p-3 content">
             <div class="container">
@@ -264,71 +199,16 @@
                     </div>
                 </div>
 
-                <div class="billing-history">
-                    <h5>Billing History</h5>
-                    <div class="filter-btn-container">
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bar-chart" aria-hidden="true"></i>
-                            View All</button>
-                        <button type="button" class="btn btn-primary">June</button>
-                    </div>
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Transactional ID</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Hours</th>
-                                <th scope="col">Amount</th>
-                                <th scope="col">Receipt</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">ID: 00023219</th>
-                                <td>
-                                    <span class="date">5/26/23</span><br>
-                                    <small id="helpId" class="form-text text-muted">At 1:00pm</small>
-                                </td>
-                                <td class="hours">+20 hrs</td>
-                                <td class="amount">-$100.00</td>
-                                <td>
-                                    <a href="#">View/Download</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">ID: 00023218</th>
-                                <td>
-                                    <span class="date">5/26/23</span><br>
-                                    <small id="helpId" class="form-text text-muted">At 1:00pm</small>
-                                </td>
-                                <td class="hours">+15 hrs</td>
-                                <td class="amount">-$75.00</td>
-                                <td>
-                                    <a href="#">View/Download</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">ID: 00023217</th>
-                                <td>
-                                    <span class="date">5/26/23</span><br>
-                                    <small id="helpId" class="form-text text-muted">At 1:00pm</small>
-                                </td>
-                                <td class="hours">-$50.00</td>
-                                <td class="amount">-$50.00</td>
-                                <td>
-                                    <a href="#">View/Download</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
+                <billing-history></billing-history>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import SideNavigationBar from '../../../components/SideNavigationBar.vue'
 import HalfCircleProgress from '../../../components/HalfCircleProgress.vue';
+import BillingHistory from '../../../components/BillingHistory.vue';
 
 export default {
     name: "NewPoject",
@@ -338,7 +218,9 @@ export default {
         }
     },
     components: {
-        HalfCircleProgress
+        SideNavigationBar,
+        HalfCircleProgress,
+        BillingHistory
     },
     methods: {
         goBackToDashboard() {
@@ -375,7 +257,7 @@ export default {
         height: 5%;
     } */
 
-    #side-nav-bar {
+    /* #side-nav-bar {
         max-width: 240px;
         color: #101828;
 
@@ -393,7 +275,6 @@ export default {
 
         .nav-link {
             display: flex;
-            /* align-content: center; */
             align-items: center;
 
             .inbox-count {
@@ -414,7 +295,7 @@ export default {
                 color: #264DDB;
             }
         }
-    }
+    }  */
 
     .content {
         font-size: 14px;
@@ -617,41 +498,6 @@ export default {
                     }
                 }
             }
-
-            .billing-history {
-                width: 100%;
-                padding-top: 1.5rem;
-
-                >h5 {
-                    font-size: 17px;
-                }
-
-                .btn-primary {
-                    --bs-btn-color: #344054;
-                    --bs-btn-bg: #FFFFFF;
-                    --bs-btn-border-color: #FFFFFF;
-                    --bs-btn-hover-color: #053CD3;
-                    --bs-btn-hover-bg: #F5F8FF;
-                    --bs-btn-hover-border-color: #F5F8FF;
-                    font-weight: 500;
-                }
-
-                .table {
-                    opacity: .9;
-                    --bs-table-hover-bg: #E9F3FB;
-
-                    >tbody {
-                        background-color: #F9FAFB;
-                    }
-
-                    .date,
-                    .hours,
-                    .amount {
-                        font-weight: 600;
-                    }
-                }
-            }
-
         }
     }
 }
