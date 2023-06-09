@@ -35,7 +35,7 @@
                 <li class="nav-item py-2 py-sm-0">
                     <a href="#" class="nav-link text-white">
                         <img src="../assets/imgs/dashboard/invoices_icon.png" />
-                        <span class="fs-5 ms-3 d-none d-sm-inline">Invoices</span>
+                        <span class="fs-5 ms-3 d-none d-sm-inline">Billing History</span>
                     </a>
                 </li>
                 <li class="nav-item py-2 py-sm-0">

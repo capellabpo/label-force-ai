@@ -1,6 +1,5 @@
 <template>
     <div class="billing-history">
-        <h5>Billing History</h5>
         <div class="filter-btn-container">
             <button type="button" class="btn btn-primary"><i class="fa fa-bar-chart" aria-hidden="true"></i>
                 View All</button>

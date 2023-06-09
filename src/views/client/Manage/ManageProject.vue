@@ -81,7 +81,7 @@
                                     <i class="fa fa-hourglass-end fa-2xl" aria-hidden="true"></i>
                                     <div>
                                         <h3>20 hrs</h3>
-                                        <small id="helpId" class="form-text text-muted">Hours Purchased</small>
+                                        <small id="helpId" class="form-text text-muted">Hours Remaining</small>
                                     </div>
                                 </div>
                             </div>
@@ -148,9 +148,9 @@
                                                     </button>
                                                     <input type="text" name="quant[1]" class="form-control input-number"
                                                         v-model="hourcount" min="1" max="11"
-                                                        :class="(hourcount >= 11) ? 'is-invalid' : ''" style="width: 18%;">
+                                                        :class="(hourcount >= 10) ? 'is-invalid' : ''" style="width: 18%;">
                                                     <button @click.prevent="increment" type="button" class="btn btn-light"
-                                                        :class="(hourcount >= 11) ? 'disabled' : ''" style="width: 12%;
+                                                        :class="(hourcount >= 10) ? 'disabled' : ''" style="width: 12%;
                                                     height: 50px;
                                                     margin: 0px 0px 0px 1rem;
                                                     border-radius: 10px;">
@@ -185,7 +185,7 @@
                                                     margin-top: 10px;
                                                     border-radius: 8px;
                                                     padding: 10px;">Cancel</button>
-                                                <button type="button" class="btn btn-primary" style="width: 45%;
+                                                <button @click="redirectToPaymentForm" type="button" class="btn btn-primary" style="width: 45%;
                                                     margin-top: 10px;
                                                     border-radius: 8px;
                                                     padding: 10px;">Proceed to payment</button>
@@ -198,8 +198,10 @@
                         </div>
                     </div>
                 </div>
-
-                <billing-history></billing-history>
+                <div class="billing-history-container">
+                    <h5 class="table-title">Billing History</h5>
+                    <billing-history></billing-history>
+                </div>
             </div>
         </div>
     </div>
@@ -214,7 +216,7 @@ export default {
     name: "NewPoject",
     data() {
         return {
-            hourcount: 1
+            hourcount: 0
         }
     },
     components: {
@@ -236,66 +238,26 @@ export default {
         },
 
         decrement() {
-            if (this.hourcount > 1) {
+            if (this.hourcount > 0) {
                 this.hourcount--;
             }
-        }
+        },
+        redirectToPaymentForm() {
+        // Set the URL of the Stripe payment form
+        const paymentFormUrl = 'https://your-stripe-payment-form-url';
+
+        // Redirect the user to the payment form
+        window.location.href = paymentFormUrl;
+        },
     }
 }
 </script>
 
 <style scoped>
 .container-fluid {
-    /* font-family: 'Inter';
-    font-style: normal; */
     background-color: #101828;
     display: flex;
     padding: 0;
-
-    /* .profile-icon {
-        width: 5%;
-        height: 5%;
-    } */
-
-    /* #side-nav-bar {
-        max-width: 240px;
-        color: #101828;
-
-        #logo-item {
-            text-decoration: none;
-        }
-
-        .nav-pills li a:hover {
-            background-color: rgba(31, 90, 250, 0.37);
-        }
-
-        .nav-logo {
-            margin: auto;
-        }
-
-        .nav-link {
-            display: flex;
-            align-items: center;
-
-            .inbox-count {
-                background-color: #264DDB;
-                padding: 2px 3px;
-                border-radius: 16px;
-                width: 36px;
-                margin: 0px 0px 0px auto;
-                text-align: -webkit-center;
-                height: 25px;
-                font-size: 14px;
-            }
-        }
-
-        #sidenav-lower-links {
-            #side-nav-divider {
-                border-width: 2px;
-                color: #264DDB;
-            }
-        }
-    }  */
 
     .content {
         font-size: 14px;
@@ -498,6 +460,16 @@ export default {
                     }
                 }
             }
+
+            .billing-history-container {
+                width: 100%;
+                padding-top: 1.5rem;
+                .table-title {
+                    padding: 0px;
+                    font-size: 17px;
+                }
+            }
+                
         }
     }
 }

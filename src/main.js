@@ -28,7 +28,11 @@ import ReviewPayment from "./views/client/NewProject/ReviewPayment.vue";
 import ManageProject from "./views/client/Manage/ManageProject.vue";
 import Inbox from "./views/client/Manage/Inbox.vue";
 import ProjectFiles from "./views/client/Manage/ProjectFileUpload.vue";
+import BilingHistoryInNavigation from "./views/client/Manage/BillingHistoryInNavigation.vue";
 import TestComponent from "./views/client/Manage/TestComponent.vue";
+
+// Account
+import UserAccount from "./views/client/AccountSettings/MyProfile.vue";
 
 const app = createApp(App);
 
@@ -107,8 +111,19 @@ const router = createRouter({
         component: ProjectFiles,
     },
     {
+        path: "/mydashboard/billinghistory",
+        component: BilingHistoryInNavigation,
+    },
+    {
         path: "/mydashboard/test",
         component: TestComponent,
+    },
+    // end of manage routes
+
+    // start of user account routes
+    {
+        path: "/mydashboard/myaccount",
+        component: UserAccount,
     },
   ],
 });
