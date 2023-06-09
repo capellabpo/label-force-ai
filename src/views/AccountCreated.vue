@@ -12,7 +12,7 @@
         <!-- Use desktop versions for now -->
         <!-- Work on actual sign-in -->
         <div id="sign-in-col">
-            <form>
+          <form>
             <img class="forgot-pwd-icon" src="../assets/imgs/check_icon.png"/>
             <div class="mail-verification-form">
                 <h4 id="">Email verified</h4>
@@ -20,7 +20,7 @@
 
                 <button @click="goToSignInForm" type="submit" class="btn btn-primary">Back to Sign in</button>
             </div>
-        </form>
+          </form>
         </div>
       </div>
 </template>

@@ -34,6 +34,9 @@ import TestComponent from "./views/client/Manage/TestComponent.vue";
 // Account
 import UserAccount from "./views/client/AccountSettings/MyProfile.vue";
 
+// Placeholder
+// import PaymentSuccess from "./views/client/PlaceholderPages/PaymentSuccess.vue";
+
 const app = createApp(App);
 
 const router = createRouter({
@@ -125,6 +128,14 @@ const router = createRouter({
         path: "/mydashboard/myaccount",
         component: UserAccount,
     },
+
+    // end of user account routes
+
+    // start of place holder pages
+    // {
+    //     path: "/mydashboard/payment/success",
+    //     component: PaymentSuccess,
+    // },
   ],
 });
 

@@ -44,7 +44,7 @@
                         <div class="left-col-header">
                             <h5>Billing History</h5>
                         </div>
-                        <billing-history></billing-history>
+                        <!-- <billing-history></billing-history> -->
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
 
 <script>
 import SideNavigationBar from '../../../components/SideNavigationBar.vue'
-import BillingHistory from '../../../components/BillingHistory.vue';
+// import BillingHistory from '../../../components/BillingHistory.vue';
 
 export default {
     name: "NewPoject",
@@ -65,7 +65,7 @@ export default {
     },
     components: {
         SideNavigationBar,
-        BillingHistory
+        // BillingHistory
     },
     methods: {
         goBackToDashboard() {

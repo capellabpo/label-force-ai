@@ -64,6 +64,7 @@
                                         <td>5/26/23</td>
                                         <td>
                                             <button type="button" class="btn btn-primary manage-btn">Payment</button>
+                                            <!-- <stripe-payment-button></stripe-payment-button> -->
                                         </td>
                                     </tr>
                                     <tr>
@@ -208,12 +209,14 @@
 </template>
 
 <script>
-import SideNavigationBar from '../../components/SideNavigationBar.vue'
+import SideNavigationBar from '../../components/SideNavigationBar.vue';
+// import StripePaymentButton from '../../components/StripePaymentButton.vue'
 
 export default {
     name: "ClientDashboard",
     components: {
-        SideNavigationBar
+        SideNavigationBar,
+        // StripePaymentButton
     },
     methods: {
         addNewProject() {

@@ -185,10 +185,11 @@
                                                     margin-top: 10px;
                                                     border-radius: 8px;
                                                     padding: 10px;">Cancel</button>
-                                                <button @click="redirectToPaymentForm" type="button" class="btn btn-primary" style="width: 45%;
+                                                <!-- <button @click="redirectToPaymentForm" type="button" class="btn btn-primary" style="width: 45%;
                                                     margin-top: 10px;
                                                     border-radius: 8px;
-                                                    padding: 10px;">Proceed to payment</button>
+                                                    padding: 10px;">Proceed to payment</button> -->
+                                                    <stripe-payment-button></stripe-payment-button>
                                             </div>
                                         </div>
                                     </div>
@@ -211,6 +212,7 @@
 import SideNavigationBar from '../../../components/SideNavigationBar.vue'
 import HalfCircleProgress from '../../../components/HalfCircleProgress.vue';
 import BillingHistory from '../../../components/BillingHistory.vue';
+import StripePaymentButton from '@/components/StripePaymentButton.vue';
 
 export default {
     name: "NewPoject",
@@ -222,7 +224,8 @@ export default {
     components: {
         SideNavigationBar,
         HalfCircleProgress,
-        BillingHistory
+        BillingHistory,
+        StripePaymentButton
     },
     methods: {
         goBackToDashboard() {
@@ -241,13 +244,6 @@ export default {
             if (this.hourcount > 0) {
                 this.hourcount--;
             }
-        },
-        redirectToPaymentForm() {
-        // Set the URL of the Stripe payment form
-        const paymentFormUrl = 'https://your-stripe-payment-form-url';
-
-        // Redirect the user to the payment form
-        window.location.href = paymentFormUrl;
         },
     }
 }
