@@ -136,30 +136,31 @@
                                             </div>
                                             <div class="modal-body">
                                                 <div style="display: flex;
-                                                flex-direction: row;
-                                                flex-wrap: nowrap;
-                                                justify-content: center;">
+                                                    flex-direction: row;
+                                                    flex-wrap: nowrap;
+                                                    justify-content: center;">
                                                     <button @click.prevent="decrement" type="button" class="btn btn-light"
+                                                        :class="(hourcount <= 9) ? 'disabled' : ''"
                                                         style="width: 12%;
-                                                    height: 50px;
-                                                    margin: 0px 1rem 0px 0px;
-                                                    border-radius: 10px;">
+                                                        height: 50px;
+                                                        margin: 0px 1rem 0px 0px;
+                                                        border-radius: 10px;">
                                                         <span class="fa fa-minus"></span>
                                                     </button>
                                                     <input type="text" name="quant[1]" class="form-control input-number"
-                                                        v-model="hourcount" min="1" max="11"
-                                                        :class="(hourcount >= 10) ? 'is-invalid' : ''" style="width: 18%;">
+                                                        v-model="hourcount" min="10" max="100"
+                                                        :class="(hourcount <= 9) ? 'is-invalid' : ''" style="width: 18%;">
                                                     <button @click.prevent="increment" type="button" class="btn btn-light"
-                                                        :class="(hourcount >= 10) ? 'disabled' : ''" style="width: 12%;
-                                                    height: 50px;
-                                                    margin: 0px 0px 0px 1rem;
-                                                    border-radius: 10px;">
+                                                        style="width: 12%;
+                                                        height: 50px;
+                                                        margin: 0px 0px 0px 1rem;
+                                                        border-radius: 10px;">
                                                         <span class="fa fa-plus"></span>
                                                     </button>
-                                                    <!-- <div class="invalid-feedback">
-                                                    The minimum is 10 hours.
-                                                </div> -->
                                                 </div>
+                                                <!-- <div class="invalid-feedback">
+                                                        The minimum is 10 hours.
+                                                    </div> -->
                                                 <hr>
                                                 <div class="row" style="margin: 0px 2rem 0px 2rem;">
                                                     <div class="col">
@@ -218,7 +219,7 @@ export default {
     name: "NewPoject",
     data() {
         return {
-            hourcount: 0
+            hourcount: 10
         }
     },
     components: {

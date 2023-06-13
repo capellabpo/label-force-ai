@@ -1,4 +1,5 @@
 <template>
+    <!-- <private-chat/> -->
     <div class="container">
         <div class="row clearfix">
             <div class="col-lg-12">
@@ -114,6 +115,16 @@
         </div>
     </div>
 </template>
+
+<script>
+// import PrivateChat from '../components/PrivateChat.vue';
+
+// export default {
+//     components: {
+//         PrivateChat
+//     }
+// }
+</script>
   
 <style scoped>
 body {

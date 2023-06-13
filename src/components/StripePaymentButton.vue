@@ -28,7 +28,7 @@ export default {
                     quantity: 1 // update as needed based from number chosen by user
                 }
             ],
-            successUrl: 'http://localhost:8080/mydashboard/manageproject',
+            successUrl: 'http://localhost:8080/client/notify',
             cancelUrl: 'http://localhost:8080/mydashboard/manageproject'
         }
     },

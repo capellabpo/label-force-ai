@@ -2,7 +2,7 @@
     <div id="side-nav-bar"
         class="bg-transparent col-auto col-md-3 col-md-3 min-vh-100 d-flex flex-column justify-content-between">
         <div class="bg-transparent p-2">
-            <a href="#" class="d-flex mt-1 align-items-center text-white" id="logo-item">
+            <a @click="goToDashboard" href="#" class="d-flex mt-1 align-items-center text-white" id="logo-item">
                 <img class="nav-logo" src="../assets/imgs/dashboard/labelforce_icon.png" />
                 <span class="fs-4 ms-3 d-none d-sm-inline" style="margin: auto;">
                     LABEL<span style="font-weight: 300;">FORCE</span> AI
@@ -10,7 +10,7 @@
             </a>
             <ul class="nav nav-pills flex-column mt-4">
                 <li class="nav-item py-2 py-sm-0">
-                    <a href="#" class="nav-link text-white" style="background-color: #101828;">
+                    <a @click="goToAccountSettings" href="#" class="nav-link text-white" style="background-color: #101828;">
                         <img class="profile-icon" src="../assets/imgs/dashboard/Avatar.png" />
                         <span class="fs-4 ms-3 d-none d-sm-inline">
                             <span style="font-size: 18px; font-weight: 500;">Olivia Rhye</span>
@@ -20,26 +20,26 @@
                     </a>
                 </li>
                 <li class="nav-item py-2 py-sm-0">
-                    <a href="#" class="nav-link text-white">
+                    <a @click="goToDashboard" href="#" class="nav-link text-white">
                         <img src="../assets/imgs/dashboard/Icon.png" />
                         <span class="fs-5 ms-3 d-none d-sm-inline">Projects</span>
                     </a>
                 </li>
                 <li class="nav-item py-2 py-sm-0">
-                    <a href="#" class="nav-link text-white">
+                    <a @click="goToInbox" href="#" class="nav-link text-white">
                         <img src="../assets/imgs/dashboard/inbox_icon.png" />
                         <span class="fs-5 ms-3 d-none d-sm-inline">Inbox</span>
                         <span class="inbox-count">10</span>
                     </a>
                 </li>
                 <li class="nav-item py-2 py-sm-0">
-                    <a href="#" class="nav-link text-white">
+                    <a @click="goToBillingHistory" href="#" class="nav-link text-white">
                         <img src="../assets/imgs/dashboard/invoices_icon.png" />
                         <span class="fs-5 ms-3 d-none d-sm-inline">Billing History</span>
                     </a>
                 </li>
                 <li class="nav-item py-2 py-sm-0">
-                    <a href="#" class="nav-link text-white">
+                    <a @click="goToAccountSettings" href="#" class="nav-link text-white">
                         <img src="../assets/imgs/dashboard/account_icon.png" />
                         <span class="fs-5 ms-3 d-none d-sm-inline">Account</span>
                     </a>
@@ -50,7 +50,7 @@
         <div class="bg-transparent p-2" id="sidenav-lower-links">
             <ul class="nav nav-pills flex-column mt-4">
                 <li class="nav-item py-2 py-sm-0">
-                    <a href="#" class="nav-link text-white">
+                    <a @click="goToSupportPage" href="#" class="nav-link text-white">
                         <img src="../assets/imgs/dashboard/support_icon.png" />
                         <span class="fs-5 ms-3 d-none d-sm-inline">Support</span>
                     </a>
@@ -66,6 +66,29 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'SideNavigationBar',
+    methods: {
+        goToDashboard() {
+            this.$router.push('/client/mydashboard')
+        },
+
+        goToAccountSettings() {
+            this.$router.push('/mydashboard/myaccount')
+        },
+
+        goToInbox() {
+            this.$router.push('/mydashboard/inbox')
+        },
+
+        goToBillingHistory() {
+            this.$router.push('/mydashboard/billinghistory')
+        },
+    }
+}
+</script>
 
 <style>
 #side-nav-bar {

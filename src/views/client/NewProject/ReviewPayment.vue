@@ -55,6 +55,7 @@
                     </div>
 
                     <div class="col-lg-9 right-column">
+                        <payment-success></payment-success>
                         <form id="add-new-projects-form" action="">
                             <div class="mb-3">
                                 <label for="" class="form-label">Review & Payment</label>
@@ -119,12 +120,12 @@
 </template>
 
 <script>
-import SideNavigationBar from '../../../components/SideNavigationBar.vue'
+import SideNavigationBar from '../../../components/SideNavigationBar.vue';
 
 export default {
     name: "PaymentForm",
     components: {
-        SideNavigationBar
+        SideNavigationBar,
     },
     methods: {
         goToLabelHoursForm() {

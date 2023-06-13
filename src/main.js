@@ -16,6 +16,7 @@ import PasswordResetView from "./views/PasswordResetView.vue";
 
 // Client Dashboard
 import ClientDashoard from "./views/client/ClientDashboard.vue";
+import PageFiller from "./views/client/PageFiller.vue"
 
 // New Project
 import NewProject from "./views/client/NewProject/AddNewProject.vue";
@@ -75,6 +76,10 @@ const router = createRouter({
     {
         path: "/client/mydashboard",
         component: ClientDashoard,
+    },
+    {
+        path: "/client/notify",
+        component: PageFiller,
     },
 
     // start of new project routes 
