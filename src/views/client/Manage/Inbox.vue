@@ -31,6 +31,7 @@
                 
                 <div class="inbox-container">
                     <chat-box></chat-box>
+                    <index-chat></index-chat>
                 </div>
             </div>
         </div>
@@ -46,7 +47,7 @@ export default {
     components: {
         SideNavigationBar,
         ChatBox
-    }
+    },
 }
 </script>
 

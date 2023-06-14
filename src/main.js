@@ -2,8 +2,8 @@ import { createApp } from 'vue';
 import { createRouter, createWebHistory } from "vue-router";
 import App from './App.vue';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
-import '../node_modules/bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/js/bootstrap.bundle';
+import 'bootstrap';
 import './assets/css/custom.css';
 
 import LoginView from "./views/LoginView.vue";
@@ -145,4 +145,4 @@ const router = createRouter({
 });
 
 app.use(router);
-app.mount('#app')
+app.mount('#app');

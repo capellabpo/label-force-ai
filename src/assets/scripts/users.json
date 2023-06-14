@@ -3,12 +3,14 @@
         "userId": "0",
         "email": "testadmin@cbpo.com",
         "password": "admintest123cbpo" ,
-        "userRole": "admin"
+        "userRole": "admin",
+        "adminRole": true 
     },
     {
         "userId": "1",
         "email": "testclient@cbpo.com",
         "password": "clienttest123cbpo",
-        "userRole": "client"
+        "userRole": "client",
+        "adminRole": false 
     }
 ]

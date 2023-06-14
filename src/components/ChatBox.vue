@@ -1,5 +1,4 @@
 <template>
-    <!-- <private-chat/> -->
     <div class="container">
         <div class="row clearfix">
             <div class="col-lg-12">
@@ -78,56 +77,121 @@
                 </div> -->
                         <div class="chat-history">
                             <ul class="m-b-0">
-                                <li class="clearfix">
-                                    <div class="my-message-data text-right">
-                                        <span class="my-message-data-time">10:10 AM, Today</span><br>
-                                        <!-- <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar"> -->
+
+                                <li class="clearfix" v-for="message in messages" :key="message">
+                                    
+                                    <div class="message-data float-right">
+                                        <span class="message-data-time">{{ message.by }}</span>
                                     </div>
-                                    <div class="message other-message float-right"> Hi Chariz, how are you?</div>
+                                    <div class="message other-message float-right"> {{ message.message }} </div>
+                                    
                                 </li>
-                                <li class="clearfix">
-                                    <div class="message-data">
-                                        <span class="message-data-time">10:12 AM, Today</span>
-                                    </div>
-                                    <div class="message my-message">Are we meeting today?</div>
-                                </li>
-                                <li class="clearfix">
-                                    <div class="message-data">
-                                        <span class="message-data-time">10:15 AM, Today</span>
-                                    </div>
-                                    <div class="message my-message">Project is still on going, I can show you an update if
-                                        you're available.</div>
-                                </li>
+                               
                             </ul>
                         </div>
+                        <small v-if="typing" class="text-white">
+                            <i>{{ typing }} is typing</i>
+                        </small>
                         <hr>
-                        <div class="chat-message clearfix">
-                            <div class="input-group mb-0">
-                                <input type="text" class="form-control" placeholder="Message">
-                            </div>
-                            <button type="button" class="btn btn-primary">
+                        <form class="chat-message clearfix" @submit.prevent="send">
+                            <input type="text" class="form-control" placeholder="Message" v-model="newmessage">
+                            <button @click.prevent="send" type="button" class="btn btn-primary">
                                 <i class="fa fa-paper-plane-o fa-lg" aria-hidden="true"></i>
                             </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</template>
-
+  </template>
+  
 <script>
-// import PrivateChat from '../components/PrivateChat.vue';
-
-// export default {
-//     components: {
-//         PrivateChat
-//     }
-// }
+  import io from 'socket.io-client';
+  
+  export default {
+    data() {
+      return {
+        newmessage: null,
+        messages: [],
+        typing: false,
+        online: [],
+        name: null,
+        ready: false,
+        info: [],
+        connectionCount: 0,
+        // socket: null,
+      };
+    },
+    methods: {
+      send() {
+        this.socket.emit('chat-message', { message: this.newmessage, user: this.name });
+        this.messages.push({ message: this.newmessage, type: 0, by: 'Me' });
+        this.newmessage = null;
+      },
+      isTyping() {
+        this.socket.emit('typing', this.name);
+      },
+    //   setName() {
+    //     this.socket.emit('joined', this.name);
+    //     this.ready = true;
+    //   },
+    },
+    mounted() {
+      this.socket = io();
+  
+    //   window.onbeforeunload = () => {
+    //     this.socket.emit('leaved', this.name);
+    //   };
+  
+    //   this.socket.on('noOfConnections', (count) => {
+    //     this.connectionCount = count;
+    //   });
+  
+      this.socket.on('chat-message', (data) => {
+        this.messages.push({ message: data.message, type: 1, by: data.user });
+        this.typing = false;
+      });
+  
+      this.socket.on('typing', (data) => {
+        this.typing = data;
+      });
+  
+      this.socket.on('stoptyping', () => {
+        this.typing = false;
+      });
+  
+    //   this.socket.on('leaved', (name) => {
+    //     this.online.splice(this.online.indexOf(name));
+    //     this.info.push({ name: name, type: 'Leaved' });
+    //     setTimeout(() => {
+    //       this.info = [];
+    //     }, 5000);
+    //   });
+  
+    //   this.socket.on('joined', (name) => {
+    //     this.online.push(name);
+    //     this.info.push({ name: name, type: 'Joined' });
+    //     setTimeout(() => {
+    //       this.info = [];
+    //     }, 5000);
+    //   });
+    },
+    watch: {
+      newmessage(value) {
+        value ? this.socket.emit('typing', this.name) : this.socket.emit('stoptyping');
+      },
+    },
+    beforeUnmount() {
+      if (this.socket) {
+        this.socket.disconnect();
+      }
+    },
+  };
 </script>
   
 <style scoped>
-body {
+ body {
     background-color: #F9FAFB;
     margin-top: 20px;
 }
@@ -465,8 +529,6 @@ body {
         height: calc(100vh - 350px);
         overflow-x: auto
     }
-}</style>
+}
+</style>
   
-<script>
-
-</script>
