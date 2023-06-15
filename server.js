@@ -8,7 +8,7 @@ app.use(cors({
 }));
 
 const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+// const io = require('socket.io')(http);
 
 // Server logic will go here
 
@@ -18,18 +18,18 @@ app.get('/', (req, res) => {
   res.send('Server is running'); // Replace with your desired response
 });
 
-io.on('connection', (socket) => {
-  socket.on('chat-message', (msg) => {
-      socket.broadcast.emit('chat-message', msg)
-  })
+// io.on('connection', (socket) => {
+//   socket.on('chat-message', (msg) => {
+//       socket.broadcast.emit('chat-message', msg)
+//   })
 
-  socket.on('typing', (data) => {
-      socket.broadcast.emit('typing', data)
-  })
-  socket.on('stoptyping', () => {
-      socket.broadcast.emit('stoptyping')
-  })
-});
+//   socket.on('typing', (data) => {
+//       socket.broadcast.emit('typing', data)
+//   })
+//   socket.on('stoptyping', () => {
+//       socket.broadcast.emit('stoptyping')
+//   })
+// });
 
 http.listen(port, () => {
   console.log(`Server listening on port ${port}`);
